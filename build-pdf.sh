@@ -10,6 +10,15 @@ NC='\033[0m' # No Color
 echo -e "${GREEN}nicFW880 Manual PDF Builder${NC}"
 echo "================================"
 
+# Detect OS for sed compatibility
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS requires empty string for -i flag
+    SED_INPLACE="sed -i ''"
+else
+    # Linux doesn't use empty string
+    SED_INPLACE="sed -i"
+fi
+
 # Check if pandoc is installed
 if ! command -v pandoc &> /dev/null; then
     echo -e "${RED}Error: pandoc is not installed${NC}"
@@ -72,59 +81,51 @@ fix_internal_links() {
     local output_file=$2
     local base_dir=$3
 
-    # Copy content to temp file
-    cp "$input_file" "$output_file"
-
-    # Find all markdown links: [text](path.md) or [text](path/file.md)
-    # Replace with internal anchors: [text](#anchor)
-
-    # Common patterns to fix (based on actual H1 titles in files)
-    # README
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/README\.md\)|[\1](#nicfw880-user-manual)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(README\.md\)|[\1](#nicfw880-user-manual)|g' "$output_file"
-
-    # Guides
-    sed -i '' -E 's|\[([^]]+)\]\(guides/key-mappings\.md\)|[\1](#key-mappings-controls-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/guides/key-mappings\.md\)|[\1](#key-mappings-controls-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(guides/aprs\.md\)|[\1](#aprs-system-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/guides/aprs\.md\)|[\1](#aprs-system-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(guides/gps\.md\)|[\1](#gps-navigation-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/guides/gps\.md\)|[\1](#gps-navigation-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(guides/dtmf\.md\)|[\1](#dtmf-functions-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/guides/dtmf\.md\)|[\1](#dtmf-functions-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(guides/si4732-tuner\.md\)|[\1](#si4732-tuner-module-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/guides/si4732-tuner\.md\)|[\1](#si4732-tuner-module-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(guides/spectrum-scope\.md\)|[\1](#spectrum-scope-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/guides/spectrum-scope\.md\)|[\1](#spectrum-scope-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(guides/scanning\.md\)|[\1](#scanning-features-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/guides/scanning\.md\)|[\1](#scanning-features-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(guides/multiwatch\.md\)|[\1](#multiwatch-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/guides/multiwatch\.md\)|[\1](#multiwatch-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(guides/calibration\.md\)|[\1](#calibration-setup-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/guides/calibration\.md\)|[\1](#calibration-setup-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(guides/crossband-repeater\.md\)|[\1](#crossband-repeater-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/guides/crossband-repeater\.md\)|[\1](#crossband-repeater-guide)|g' "$output_file"
-
-    # Reference
-    sed -i '' -E 's|\[([^]]+)\]\(reference/menu-structure\.md\)|[\1](#menu-structure-reference)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/reference/menu-structure\.md\)|[\1](#menu-structure-reference)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(reference/key-shortcuts\.md\)|[\1](#key-shortcuts-quick-reference)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/reference/key-shortcuts\.md\)|[\1](#key-shortcuts-quick-reference)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(reference/advanced-menu\.md\)|[\1](#advanced-menu-overview)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/reference/advanced-menu\.md\)|[\1](#advanced-menu-overview)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(reference/squelch-settings\.md\)|[\1](#squelch-settings-overview)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/reference/squelch-settings\.md\)|[\1](#squelch-settings-overview)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(reference/troubleshooting\.md\)|[\1](#troubleshooting-guide)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/reference/troubleshooting\.md\)|[\1](#troubleshooting-guide)|g' "$output_file"
-
-    # Changelog
-    sed -i '' -E 's|\[([^]]+)\]\(changelog/alpha-releases\.md\)|[\1](#alpha-releases-changelog)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/changelog/alpha-releases\.md\)|[\1](#alpha-releases-changelog)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(changelog/beta-releases\.md\)|[\1](#beta-releases-changelog)|g' "$output_file"
-    sed -i '' -E 's|\[([^]]+)\]\(\.\.?/changelog/beta-releases\.md\)|[\1](#beta-releases-changelog)|g' "$output_file"
-
-    # Generic fallback: remove any remaining .md links and convert to plain anchors
-    sed -i '' -E 's|\[([^]]+)\]\([^)]*\.md\)|[\1]|g' "$output_file"
+    # Read content and apply all substitutions via pipeline (cross-platform compatible)
+    cat "$input_file" | \
+        # README
+        sed -E 's|\[([^]]+)\]\(\.\.?/README\.md\)|[\1](#nicfw880-user-manual)|g' | \
+        sed -E 's|\[([^]]+)\]\(README\.md\)|[\1](#nicfw880-user-manual)|g' | \
+        # Guides
+        sed -E 's|\[([^]]+)\]\(guides/key-mappings\.md\)|[\1](#key-mappings-controls-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/guides/key-mappings\.md\)|[\1](#key-mappings-controls-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(guides/aprs\.md\)|[\1](#aprs-system-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/guides/aprs\.md\)|[\1](#aprs-system-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(guides/gps\.md\)|[\1](#gps-navigation-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/guides/gps\.md\)|[\1](#gps-navigation-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(guides/dtmf\.md\)|[\1](#dtmf-functions-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/guides/dtmf\.md\)|[\1](#dtmf-functions-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(guides/si4732-tuner\.md\)|[\1](#si4732-tuner-module-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/guides/si4732-tuner\.md\)|[\1](#si4732-tuner-module-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(guides/spectrum-scope\.md\)|[\1](#spectrum-scope-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/guides/spectrum-scope\.md\)|[\1](#spectrum-scope-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(guides/scanning\.md\)|[\1](#scanning-features-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/guides/scanning\.md\)|[\1](#scanning-features-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(guides/multiwatch\.md\)|[\1](#multiwatch-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/guides/multiwatch\.md\)|[\1](#multiwatch-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(guides/calibration\.md\)|[\1](#calibration-setup-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/guides/calibration\.md\)|[\1](#calibration-setup-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(guides/crossband-repeater\.md\)|[\1](#crossband-repeater-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/guides/crossband-repeater\.md\)|[\1](#crossband-repeater-guide)|g' | \
+        # Reference
+        sed -E 's|\[([^]]+)\]\(reference/menu-structure\.md\)|[\1](#menu-structure-reference)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/reference/menu-structure\.md\)|[\1](#menu-structure-reference)|g' | \
+        sed -E 's|\[([^]]+)\]\(reference/key-shortcuts\.md\)|[\1](#key-shortcuts-quick-reference)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/reference/key-shortcuts\.md\)|[\1](#key-shortcuts-quick-reference)|g' | \
+        sed -E 's|\[([^]]+)\]\(reference/advanced-menu\.md\)|[\1](#advanced-menu-overview)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/reference/advanced-menu\.md\)|[\1](#advanced-menu-overview)|g' | \
+        sed -E 's|\[([^]]+)\]\(reference/squelch-settings\.md\)|[\1](#squelch-settings-overview)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/reference/squelch-settings\.md\)|[\1](#squelch-settings-overview)|g' | \
+        sed -E 's|\[([^]]+)\]\(reference/troubleshooting\.md\)|[\1](#troubleshooting-guide)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/reference/troubleshooting\.md\)|[\1](#troubleshooting-guide)|g' | \
+        # Changelog
+        sed -E 's|\[([^]]+)\]\(changelog/alpha-releases\.md\)|[\1](#alpha-releases-changelog)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/changelog/alpha-releases\.md\)|[\1](#alpha-releases-changelog)|g' | \
+        sed -E 's|\[([^]]+)\]\(changelog/beta-releases\.md\)|[\1](#beta-releases-changelog)|g' | \
+        sed -E 's|\[([^]]+)\]\(\.\.?/changelog/beta-releases\.md\)|[\1](#beta-releases-changelog)|g' | \
+        # Generic fallback: remove any remaining .md links
+        sed -E 's|\[([^]]+)\]\([^)]*\.md\)|[\1]|g' \
+        > "$output_file"
 }
 
 PDF_ENGINE=$(detect_pdf_engine)
