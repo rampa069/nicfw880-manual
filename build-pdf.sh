@@ -300,7 +300,7 @@ EOF
                 -V linkcolor:blue \
                 -V geometry:a4paper \
                 -V geometry:margin=2cm \
-                --syntax-highlighting=tango \
+                --highlight-style=tango \
                 --metadata-file=<(cat << METADATA
 ---
 title: "$title"
@@ -323,7 +323,7 @@ METADATA
                 -V linkcolor:blue \
                 -V geometry:a4paper \
                 -V geometry:margin=2cm \
-                --syntax-highlighting=tango \
+                --highlight-style=tango \
                 --metadata-file=<(cat << METADATA
 ---
 title: "$title"
@@ -347,7 +347,7 @@ METADATA
             -V linkcolor:blue \
             -V geometry:a4paper \
             -V geometry:margin=2cm \
-            --syntax-highlighting=tango \
+            --highlight-style=tango \
             --metadata-file=<(cat << METADATA
 ---
 title: "$title"
