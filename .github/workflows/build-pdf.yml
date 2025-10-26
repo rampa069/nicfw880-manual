@@ -1,0 +1,88 @@
+name: Build PDF Manuals
+
+on:
+  # Trigger on release creation
+  release:
+    types: [published]
+
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag (leave empty to use git tag)'
+        required: false
+        default: ''
+
+jobs:
+  build-pdf:
+    name: Build PDF Manuals
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            pandoc \
+            texlive-latex-base \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-latex-extra \
+            texlive-xetex \
+            fonts-dejavu \
+            fontconfig
+
+      - name: Set version
+        id: version
+        run: |
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+          elif [ "${{ github.event_name }}" == "release" ]; then
+            echo "VERSION=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
+          else
+            VERSION=$(git describe --tags --always 2>/dev/null || echo "dev-$(date +%Y%m%d)")
+            echo "VERSION=$VERSION" >> $GITHUB_ENV
+          fi
+          echo "Building version: $VERSION"
+
+      - name: Build PDFs
+        run: |
+          chmod +x build-pdf.sh
+          ./build-pdf.sh
+
+      - name: List generated files
+        run: |
+          echo "Generated PDFs:"
+          ls -lh pdf-output/
+
+      - name: Upload PDFs as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: nicFW880-Manuals-${{ env.VERSION }}
+          path: pdf-output/*.pdf
+          retention-days: 90
+
+      - name: Upload PDFs to release
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: pdf-output/*.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create version summary
+        run: |
+          echo "## Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** $VERSION" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Generated PDFs" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          for pdf in pdf-output/*.pdf; do
+            size=$(du -h "$pdf" | cut -f1)
+            name=$(basename "$pdf")
+            echo "- \`$name\` ($size)" >> $GITHUB_STEP_SUMMARY
+          done

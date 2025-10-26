@@ -73,6 +73,22 @@ This manual covers:
 3. **Browse by topic** - Use the guides above to learn specific features
 4. **Check version notes** - See [Changelog](wiki/changelog/) for version-specific information
 
+## 📄 PDF Manuals
+
+Pre-built PDF versions of the manuals are available as release assets on GitHub.
+
+### Build PDFs Locally
+
+```bash
+./build-pdf.sh
+```
+
+Generated PDFs will be in the `pdf-output/` directory:
+- `nicFW880-Manual-EN-{version}.pdf` - English manual
+- `nicFW880-Manual-ES-{version}.pdf` - Spanish manual
+
+For detailed build instructions, dependencies, and customization options, see [BUILD.md](BUILD.md).
+
 ## 🤝 Contributing
 
 This is a community-compiled manual based on nicsure's Patreon posts. If you find errors or have improvements:

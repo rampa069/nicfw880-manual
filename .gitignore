@@ -19,5 +19,8 @@ Thumbs.db
 *.bak
 .~*
 
+# PDF output directory
+pdf-output/
+
 # Optional: Uncomment if you don't want to include the raw posts
 # posts_temp/
