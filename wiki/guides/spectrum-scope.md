@@ -75,8 +75,10 @@ Available widths:
 
 The scope now has its own function menu providing quick access to:
 - Modulation selection (FM, AM, DSB)
-- Monitor trigger settings
+- Monitor trigger settings (BETA 06: Set/Clear Trigger)
+- Set Ignore (SP #) (BETA 06)
 - Clear ignores
+- Freq → VFO (PTT) (BETA 06)
 - Other scope functions
 
 Also selectable via the function menu.
@@ -95,6 +97,16 @@ Automatically monitor signals above a certain level.
 - **LP-1 to 9:** Set trigger level (1 = lowest, 9 = highest)
 
 **Visual indicator:** Blue line appears on scope showing trigger level
+
+### Set Trigger Function (BETA 06+)
+
+**Access:** Via Function Menu (LP-GREEN) → Set Trigger
+
+**Behavior:**
+- If no trigger is set: Sets trigger at level 6
+- If trigger is already set: Clears the trigger
+
+This provides a quick toggle for enabling/disabling the trigger without navigating through level settings.
 
 ### Exiting Monitor Mode (BETA 05G+)
 
@@ -119,6 +131,17 @@ Also selectable via the function menu.
 **In monitor mode:** Press **#** while monitoring to exclude/ignore frequency
 
 Works the same as when scanning.
+
+### BETA 06 Updates
+
+**Set Ignore (SP #):** New function menu option to ignore/exclude frequencies
+- Accessible via Function Menu (LP-GREEN)
+- Alternative method to pressing # during monitoring
+
+**Freq → VFO (PTT):** Copy current frequency to active VFO
+- Accessible via Function Menu (LP-GREEN)
+- Press PTT to transfer frequency from scope to VFO
+- Useful for quickly saving interesting frequencies
 
 ### Clear Ignores (BETA 05G)
 

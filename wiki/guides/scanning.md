@@ -105,6 +105,9 @@ Scan between two frequency limits in VFO mode.
 ### Channel Scan
 Scan through programmed channels.
 
+**BETA 06 Update - HF Relay Behavior:**
+Channel scan no longer causes the HF relay to toggle during scanning. The first channel scanned now defines whether the scan operates in HF or non-HF mode, preventing relay toggling throughout the scan.
+
 ### Preset Scan (ALPHA 19+)
 Use saved scan preset configurations.
 

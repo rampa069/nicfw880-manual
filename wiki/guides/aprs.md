@@ -2,10 +2,10 @@
 
 ## Overview
 
-The APRS (Automatic Packet Reporting System) functionality was introduced in BETA 04E and has been continuously improved through BETA 05G. APRS allows you to send and receive location beacons and other packet data.
+The APRS (Automatic Packet Reporting System) functionality was introduced in BETA 04E and has been continuously improved through BETA 06. APRS allows you to send and receive location beacons and other packet data.
 
 **First introduced:** BETA 04E
-**Latest updates:** BETA 05F/05G
+**Latest updates:** BETA 06
 
 ⚠️ **Important:** APRS is in continuous development. Features are added incrementally.
 
@@ -16,11 +16,17 @@ The APRS (Automatic Packet Reporting System) functionality was introduced in BET
 - Standard APRS Beacon decoding
 - Compressed APRS Beacon decoding
 - MIC-E Beacon decoding (BETA 04F+)
+- APRS-IS packet unwrapping (BETA 06)
+- Weather packet decoding (BETA 06)
 
 ### Beacon Transmission
-- Manual beacons (PTT + S1)
+- Manual beacons (PTT + S1, or SP-1 during TX in BETA 06+)
 - Automatic beacons (time-based or distance-based)
 - PTT beacons (start/end of transmission)
+
+### Heard Beacon Browser (BETA 06+)
+- Access received APRS beacons from radio mode (User function)
+- View weather data from received weather packets
 
 ## Configuration
 
@@ -94,6 +100,7 @@ When set:
 - Manual beacons and PTT beacons are always sent on the active VFO
 - Do not use squelch override on the VFO that's set for APRS (BETA 05C+)
 - Squelch override cannot be activated on a VFO assigned to APRS if Hear Tones is off (BETA 05D)
+- If APRS decoding is disabled but an APRS VFO is assigned, that VFO will be excluded from multiwatch (BETA 06)
 
 ## APRS Icons
 
@@ -107,7 +114,13 @@ When set:
 
 ## Beacon List (BETA 04F+)
 
+### Accessing Heard Beacons
+
+**GPS Module (BETA 04F+):**
 In the GPS module, **SP-6** opens the "Heard Beacons" list menu (requires at least one beacon heard).
+
+**Radio Mode (BETA 06+):**
+Heard Beacon Browser now accessible from radio mode via User function.
 
 ⚠️ **Note:** Heard beacons are not retained in storage.
 
@@ -120,6 +133,19 @@ In the GPS module, **SP-6** opens the "Heard Beacons" list menu (requires at lea
 Beacon popup/browser now shows:
 - Distance to beacon
 - Heading to beacon
+
+### Weather Packets (BETA 06+)
+
+**Weather Packet Decoding:**
+The radio now decodes APRS weather packets and displays weather data.
+
+**Features:**
+- Weather popup displays decoded weather information
+- User function available for recalling weather data
+- Integrates with Heard Beacon Browser
+
+**Accessing Weather Data:**
+Use the User function to recall weather data from received weather packets.
 
 ### Saving Beacons
 To save a beacon to waypoints:
@@ -134,6 +160,14 @@ While PTT is engaged, short press **S1** to send an APRS location beacon.
 **Requirements:**
 - Works only in regular radio mode (not GPS module mode)
 - Uses DTMF Start Delay for timing
+
+### Manual Beacon in Radio Mode (BETA 06+)
+You can now send manual beacons directly from regular radio mode without entering GPS mode.
+
+**Method 1:** Press **SP-1** during TX to send a beacon
+**Method 2:** Traditional PTT + S1 method (as above)
+
+**Note:** No need to switch to GPS mode anymore for manual beacon transmission.
 
 ## Virtual TTNC (KISS Mode) (BETA 04F+)
 

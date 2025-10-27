@@ -75,8 +75,10 @@ Anchos disponibles:
 
 El scope ahora tiene su propio menú de funciones proporcionando acceso rápido a:
 - Selección de modulación (FM, AM, DSB)
-- Configuración de trigger de monitoreo
+- Configuración de trigger de monitoreo (BETA 06: Set/Clear Trigger)
+- Set Ignore (SP #) (BETA 06)
 - Limpiar ignores
+- Freq → VFO (PTT) (BETA 06)
 - Otras funciones del scope
 
 También seleccionable via menú de funciones.
@@ -95,6 +97,16 @@ Monitorea automáticamente señales por encima de cierto nivel.
 - **LP-1 a 9:** Establecer nivel de trigger (1 = más bajo, 9 = más alto)
 
 **Indicador visual:** Aparece línea azul en el scope mostrando nivel de trigger
+
+### Función Set Trigger (BETA 06+)
+
+**Acceso:** Via Menú de Funciones (LP-GREEN) → Set Trigger
+
+**Comportamiento:**
+- Si no hay trigger configurado: Establece trigger en nivel 6
+- Si ya hay un trigger configurado: Limpia el trigger
+
+Esto proporciona un toggle rápido para habilitar/deshabilitar el trigger sin navegar por configuraciones de nivel.
 
 ### Salir del Modo Monitor (BETA 05G+)
 
@@ -119,6 +131,17 @@ También seleccionable via menú de funciones.
 **En modo monitor:** Presiona **#** mientras monitores para excluir/ignorar frecuencia
 
 Funciona igual que cuando se escanea.
+
+### Actualizaciones BETA 06
+
+**Set Ignore (SP #):** Nueva opción en menú de funciones para ignorar/excluir frecuencias
+- Accesible vía Menú de Funciones (LP-GREEN)
+- Método alternativo a presionar # durante monitoreo
+
+**Freq → VFO (PTT):** Copiar frecuencia actual al VFO activo
+- Accesible vía Menú de Funciones (LP-GREEN)
+- Presiona PTT para transferir frecuencia del scope al VFO
+- Útil para guardar rápidamente frecuencias interesantes
 
 ### Limpiar Ignores (BETA 05G)
 

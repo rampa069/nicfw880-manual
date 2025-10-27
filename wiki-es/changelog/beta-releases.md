@@ -553,6 +553,41 @@ Ahora relé de conmutación de banda HF suprimido durante verificaciones Multiwa
 
 ---
 
-**Fin de Versiones BETA (hasta BETA 05G)**
+## BETA 06
+
+**Importante:** Como siempre, por favor revise las notas de versiones anteriores antes de hacer preguntas. Las características y actualizaciones de versiones previas no se repiten en estas publicaciones.
+
+### Nuevas Características y Mejoras
+
+**Envío Manual de Balizas:**
+- Envío manual de balizas (SP-1 durante TX) ahora posible en modo radio normal
+- Ya no es necesario entrar en modo GPS
+
+**Navegador de Balizas Escuchadas:**
+- Ahora accesible desde modo radio (función de usuario)
+
+**Mejoras APRS:**
+- Implementado desempaquetado de paquetes APRS-IS
+- Si la decodificación APRS está deshabilitada, pero se asigna un VFO APRS, ese VFO será excluido del multiwatch
+
+**Escaneo de Canales:**
+- El escaneo de canales ya no causa que el relé HF se active/desactive
+- El primer canal escaneado define si el escaneo opera en modo HF o no-HF
+
+**Paquetes Meteorológicos:**
+- Los paquetes meteorológicos ahora deberían decodificarse correctamente
+- Popup meteorológico añadido
+- Función de usuario para recuperar datos meteorológicos
+
+**Menú de Funciones del Spectrum Scope:**
+- **Set Trigger** ahora funcional:
+  - Si no hay trigger configurado, establece uno en nivel 6
+  - Si hay un trigger configurado, lo elimina
+- **Añadido Set Ignore** (SP #)
+- **Añadido Freq → VFO** (PTT)
+
+---
+
+**Fin de Versiones BETA (hasta BETA 06)**
 
 Para información sobre características específicas, ver sección [Guías de Usuario](../guides/).

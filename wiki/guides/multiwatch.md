@@ -131,6 +131,9 @@ HT Monitor integration allows multiwatch to interrupt tuner for VFO activity.
 - Requires Main Menu → APRS → Use VFO to be set
 - Do not use squelch override on VFO assigned to APRS
 
+**BETA 06 Update - VFO Exclusion:**
+If APRS decoding is disabled but an APRS VFO is assigned (via Main Menu → APRS → Use VFO), that VFO will be automatically excluded from multiwatch. This prevents conflicts and ensures proper operation.
+
 See [APRS Guide](aprs.md) for more details.
 
 ## Troubleshooting

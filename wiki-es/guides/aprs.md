@@ -2,10 +2,10 @@
 
 ## Descripción General
 
-La funcionalidad APRS (Automatic Packet Reporting System) se introdujo en BETA 04E y ha sido mejorada continuamente hasta BETA 05G. APRS permite enviar y recibir balizas de ubicación y otros datos de paquetes.
+La funcionalidad APRS (Automatic Packet Reporting System) se introdujo en BETA 04E y ha sido mejorada continuamente hasta BETA 06. APRS permite enviar y recibir balizas de ubicación y otros datos de paquetes.
 
 **Primera introducción:** BETA 04E
-**Últimas actualizaciones:** BETA 05F/05G
+**Últimas actualizaciones:** BETA 06
 
 ⚠️ **Importante:** APRS está en desarrollo continuo. Las características se añaden de forma incremental.
 
@@ -16,11 +16,17 @@ La funcionalidad APRS (Automatic Packet Reporting System) se introdujo en BETA 0
 - Decodificación de balizas APRS estándar
 - Decodificación de balizas APRS comprimidas
 - Decodificación de balizas MIC-E (BETA 04F+)
+- Desempaquetado de paquetes APRS-IS (BETA 06)
+- Decodificación de paquetes meteorológicos (BETA 06)
 
 ### Transmisión de Balizas
-- Balizas manuales (PTT + S1)
+- Balizas manuales (PTT + S1, o SP-1 durante TX en BETA 06+)
 - Balizas automáticas (basadas en tiempo o distancia)
 - Balizas PTT (inicio/fin de transmisión)
+
+### Navegador de Balizas Escuchadas (BETA 06+)
+- Acceso a balizas APRS recibidas desde modo radio (función de usuario)
+- Ver datos meteorológicos de paquetes meteorológicos recibidos
 
 ## Configuración
 
@@ -94,6 +100,7 @@ Cuando se configura:
 - Las balizas manuales y balizas PTT siempre se envían en el VFO activo
 - No usar squelch override en el VFO configurado para APRS (BETA 05C+)
 - Squelch override no se puede activar en VFO asignado a APRS si Hear Tones está desactivado (BETA 05D)
+- Si la decodificación APRS está deshabilitada pero se asigna un VFO APRS, ese VFO será excluido del multiwatch (BETA 06)
 
 ## Iconos APRS
 
@@ -107,7 +114,13 @@ Cuando se configura:
 
 ## Lista de Balizas (BETA 04F+)
 
+### Acceso a Balizas Escuchadas
+
+**Módulo GPS (BETA 04F+):**
 En el módulo GPS, **SP-6** abre el menú de lista "Heard Beacons" (requiere al menos una baliza escuchada).
+
+**Modo Radio (BETA 06+):**
+Navegador de Balizas Escuchadas ahora accesible desde modo radio vía función de usuario.
 
 ⚠️ **Nota:** Las balizas escuchadas no se retienen en el almacenamiento.
 
@@ -121,6 +134,19 @@ El popup/navegador de balizas ahora muestra:
 - Distancia a la baliza
 - Rumbo a la baliza
 
+### Paquetes Meteorológicos (BETA 06+)
+
+**Decodificación de Paquetes Meteorológicos:**
+La radio ahora decodifica paquetes meteorológicos APRS y muestra datos meteorológicos.
+
+**Características:**
+- Popup meteorológico muestra información meteorológica decodificada
+- Función de usuario disponible para recuperar datos meteorológicos
+- Se integra con el Navegador de Balizas Escuchadas
+
+**Acceso a Datos Meteorológicos:**
+Use la función de usuario para recuperar datos meteorológicos de paquetes meteorológicos recibidos.
+
 ### Guardar Balizas
 Para guardar una baliza en waypoints:
 1. Usa el menú de lista de balizas para establecerla como objetivo actual (GREEN)
@@ -130,6 +156,18 @@ Para guardar una baliza en waypoints:
 
 ### Baliza PTT (BETA 04E+)
 Mientras PTT está presionado, presiona brevemente **S1** para enviar una baliza de ubicación APRS.
+
+**Requisitos:**
+- Funciona solo en modo radio regular (no en modo módulo GPS)
+- Usa DTMF Start Delay para temporización
+
+### Baliza Manual en Modo Radio (BETA 06+)
+Ahora puedes enviar balizas manuales directamente desde modo radio regular sin entrar en modo GPS.
+
+**Método 1:** Presiona **SP-1** durante TX para enviar una baliza
+**Método 2:** Método tradicional PTT + S1 (como arriba)
+
+**Nota:** Ya no es necesario cambiar a modo GPS para transmisión manual de balizas.
 
 **Requisitos:**
 - Solo funciona en modo radio normal (no en módulo GPS)

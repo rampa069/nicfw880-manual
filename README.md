@@ -45,7 +45,7 @@
 
 - **Firmware Author**: [nicsure on Patreon](https://www.patreon.com/c/nicsure/posts)
 - **RMS Software**: [nicfw880-rms-builder on GitHub](https://github.com/nicsure/nicfw880-rms-builder/)
-- **Latest Version**: BETA 05G (as of documentation compilation)
+- **Latest Version**: BETA 06 (as of documentation compilation)
 
 ## 📋 Supported Hardware
 
@@ -61,7 +61,7 @@ This manual covers:
 - ✅ Complete feature documentation
 - ✅ Step-by-step guides for all major features
 - ✅ Troubleshooting for common issues
-- ✅ Full version history (ALPHA 12-19, BETA 01-05G)
+- ✅ Full version history (ALPHA 12-19, BETA 01-06)
 - ✅ Calibration procedures
 - ✅ Key mappings and shortcuts
 - ✅ Menu structure reference
@@ -116,7 +116,7 @@ All firmware terms and brand names are property of their respective owners.
 | Main README | ✅ | ✅ | 1 + 1 |
 | **Total** | **18** | **18** | **36 files** |
 
-**Coverage**: ALPHA 12 through BETA 05G
+**Coverage**: ALPHA 12 through BETA 06
 
 ---
 
