@@ -2,10 +2,10 @@
 
 ## Descripción General
 
-La funcionalidad APRS (Automatic Packet Reporting System) se introdujo en BETA 04E y ha sido mejorada continuamente hasta BETA 06. APRS permite enviar y recibir balizas de ubicación y otros datos de paquetes.
+La funcionalidad APRS (Automatic Packet Reporting System) se introdujo en BETA 04E y ha sido mejorada continuamente hasta BETA 06A. APRS permite enviar y recibir balizas de ubicación y otros datos de paquetes.
 
 **Primera introducción:** BETA 04E
-**Últimas actualizaciones:** BETA 06
+**Últimas actualizaciones:** BETA 06A
 
 ⚠️ **Importante:** APRS está en desarrollo continuo. Las características se añaden de forma incremental.
 
@@ -70,6 +70,13 @@ Controla el volumen de los datos APRS. Los valores predeterminados suelen estar 
 Normalmente los datos APRS no son audibles. Activa esto para escucharlos con fines de diagnóstico.
 
 **Corregido en 05F:** Recepción sin silenciar durante popups APRS cuando Hear Tones está activado.
+
+#### Filter (BETA 06A+)
+Filtro AF para usar específicamente cuando se recibe una señal en el VFO asignado a APRS.
+
+**Propósito:** Permite filtrado de audio específicamente para recepción APRS para mejorar la fiabilidad de decodificación.
+
+**Ruta:** Main Menu → APRS → Filter
 
 ### Configuración de Digipeater
 

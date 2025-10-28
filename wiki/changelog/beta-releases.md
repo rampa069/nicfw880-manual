@@ -588,6 +588,24 @@ Now HF band-switch relay suppressed during Multiwatch checks. Active VFO dominan
 
 ---
 
-**End of BETA Releases (as of BETA 06)**
+## BETA 06A
+
+### Fixes
+
+**APRS Squelch Override Fix:**
+- Fixed squelch override engaging when PTT is released before a manual APRS packet has finished transmitting
+
+### New Features
+
+**AF Filter for APRS VFO:**
+- Added AF Filter to use specifically when a signal is received on the APRS assigned VFO
+- **Path:** Main Menu → APRS → Filter
+- Allows filtering of audio specifically for APRS reception
+
+**Note:** Continue to use RMS BETA 06 with this version.
+
+---
+
+**End of BETA Releases (as of BETA 06A)**
 
 For information on specific features, see the [User Guides](../guides/) section.

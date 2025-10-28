@@ -2,10 +2,10 @@
 
 ## Overview
 
-The APRS (Automatic Packet Reporting System) functionality was introduced in BETA 04E and has been continuously improved through BETA 06. APRS allows you to send and receive location beacons and other packet data.
+The APRS (Automatic Packet Reporting System) functionality was introduced in BETA 04E and has been continuously improved through BETA 06A. APRS allows you to send and receive location beacons and other packet data.
 
 **First introduced:** BETA 04E
-**Latest updates:** BETA 06
+**Latest updates:** BETA 06A
 
 ⚠️ **Important:** APRS is in continuous development. Features are added incrementally.
 
@@ -70,6 +70,13 @@ Controls the loudness of the APRS data. Defaults are typically fine, but can be 
 Normally APRS data isn't audible. Enable this to hear it for diagnostic purposes.
 
 **Fixed in 05F:** Unsquelched reception during APRS pop-ups when Hear Tones is enabled.
+
+#### Filter (BETA 06A+)
+AF Filter to use specifically when a signal is received on the APRS assigned VFO.
+
+**Purpose:** Allows filtering of audio specifically for APRS reception to improve decoding reliability.
+
+**Path:** Main Menu → APRS → Filter
 
 ### Digipeater Settings
 

@@ -588,6 +588,24 @@ Ahora relé de conmutación de banda HF suprimido durante verificaciones Multiwa
 
 ---
 
-**Fin de Versiones BETA (hasta BETA 06)**
+## BETA 06A
+
+### Correcciones
+
+**Corrección Squelch Override APRS:**
+- Corregido squelch override activándose cuando PTT se libera antes de que un paquete APRS manual haya terminado de transmitirse
+
+### Nuevas Características
+
+**Filtro AF para VFO APRS:**
+- Añadido Filtro AF para usar específicamente cuando se recibe una señal en el VFO asignado a APRS
+- **Ruta:** Main Menu → APRS → Filter
+- Permite filtrado de audio específicamente para recepción APRS
+
+**Nota:** Continuar usando RMS BETA 06 con esta versión.
+
+---
+
+**Fin de Versiones BETA (hasta BETA 06A)**
 
 Para información sobre características específicas, ver sección [Guías de Usuario](../guides/).
