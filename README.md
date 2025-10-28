@@ -41,6 +41,26 @@
 - [Spectrum Scope (EN)](wiki/guides/spectrum-scope.md) | [(ES)](wiki-es/guides/spectrum-scope.md)
 - [Calibration (EN)](wiki/guides/calibration.md) | [(ES)](wiki-es/guides/calibration.md)
 
+## 📋 Quick Reference Cheat Sheets
+
+### Key Mapping Cheat Sheet
+
+Quick reference card with all key shortcuts and combinations:
+
+- **[English Cheat Sheet](KEYMAP-CHEATSHEET-EN.md)** - Quick reference for all key mappings
+- **[Chuleta en Español](KEYMAP-CHEATSHEET-ES.md)** - Referencia rápida de atajos de teclas
+
+PDF versions available in releases: `nicFW880-KeyMap-EN-{version}.pdf` / `nicFW880-KeyMap-ES-{version}.pdf`
+
+### Menu Structure Cheat Sheet
+
+Quick reference card with complete menu structure and all settings:
+
+- **[English Menu Cheat Sheet](MENU-CHEATSHEET-EN.md)** - Complete menu structure reference
+- **[Chuleta de Menús en Español](MENU-CHEATSHEET-ES.md)** - Referencia completa de estructura de menús
+
+PDF versions available in releases: `nicFW880-Menu-EN-{version}.pdf` / `nicFW880-Menu-ES-{version}.pdf`
+
 ## 🔗 Official Resources
 
 - **Firmware Author**: [nicsure on Patreon](https://www.patreon.com/c/nicsure/posts)
@@ -75,7 +95,7 @@ This manual covers:
 
 ## 📄 PDF Manuals
 
-Pre-built PDF versions of the manuals are available as release assets on GitHub.
+Pre-built PDF versions of the manuals and cheat sheets are available as release assets on GitHub.
 
 ### Build PDFs Locally
 
@@ -84,8 +104,12 @@ Pre-built PDF versions of the manuals are available as release assets on GitHub.
 ```
 
 Generated PDFs will be in the `pdf-output/` directory:
-- `nicFW880-Manual-EN-{version}.pdf` - English manual
-- `nicFW880-Manual-ES-{version}.pdf` - Spanish manual
+- `nicFW880-Manual-EN-{version}.pdf` - English manual (full)
+- `nicFW880-Manual-ES-{version}.pdf` - Spanish manual (full)
+- `nicFW880-KeyMap-EN-{version}.pdf` - English key mapping cheat sheet
+- `nicFW880-KeyMap-ES-{version}.pdf` - Spanish key mapping cheat sheet
+- `nicFW880-Menu-EN-{version}.pdf` - English menu structure cheat sheet
+- `nicFW880-Menu-ES-{version}.pdf` - Spanish menu structure cheat sheet
 
 For detailed build instructions, dependencies, and customization options, see [BUILD.md](BUILD.md).
 

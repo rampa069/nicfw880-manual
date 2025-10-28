@@ -387,6 +387,109 @@ build_manual \
     "nicFW880-Manual-ES-${VERSION}.pdf" \
     "nicFW880 Manual de Usuario"
 
+# Function to build a cheat sheet
+build_cheatsheet() {
+    local lang=$1
+    local input_file=$2
+    local output_file=$3
+    local title=$4
+
+    echo -e "${YELLOW}Building $title...${NC}"
+
+    # Create temporary directory for processing
+    TMP_DIR=$(mktemp -d)
+
+    # Process the file (clean emojis if using pdflatex)
+    if [[ "$PDF_ENGINE" == "pdflatex" ]]; then
+        clean_unicode "$input_file" "$TMP_DIR/cleaned.md"
+        INPUT_FILE="$TMP_DIR/cleaned.md"
+    else
+        INPUT_FILE="$input_file"
+    fi
+
+    # Set language option
+    if [[ "$lang" == "es" ]]; then
+        local lang_option="-V lang=es"
+    else
+        local lang_option="-V lang=en"
+    fi
+
+    # Generate PDF
+    if [[ "$PDF_ENGINE" == "xelatex" ]]; then
+        pandoc "$INPUT_FILE" \
+            -o "$OUTPUT_DIR/$output_file" \
+            --pdf-engine="$PDF_ENGINE" \
+            $lang_option \
+            -V linkcolor:blue \
+            -V geometry:a4paper \
+            --highlight-style=tango
+    else
+        pandoc "$INPUT_FILE" \
+            -o "$OUTPUT_DIR/$output_file" \
+            --pdf-engine="$PDF_ENGINE" \
+            $lang_option \
+            -V linkcolor:blue \
+            -V geometry:a4paper \
+            --highlight-style=tango
+    fi
+
+    if [ $? -eq 0 ]; then
+        echo -e "${GREEN}  ✓ Created: $OUTPUT_DIR/$output_file${NC}"
+        FILE_SIZE=$(du -h "$OUTPUT_DIR/$output_file" | cut -f1)
+        echo -e "    Size: $FILE_SIZE"
+    else
+        echo -e "${RED}  ✗ Failed to create $output_file${NC}"
+    fi
+
+    # Cleanup
+    rm -rf "$TMP_DIR"
+    echo ""
+}
+
+# Build English cheat sheet
+if [ -f "KEYMAP-CHEATSHEET-EN.md" ]; then
+    build_cheatsheet \
+        "en" \
+        "KEYMAP-CHEATSHEET-EN.md" \
+        "nicFW880-KeyMap-EN-${VERSION}.pdf" \
+        "Key Mapping Cheat Sheet (English)"
+else
+    echo -e "${YELLOW}Note: KEYMAP-CHEATSHEET-EN.md not found, skipping${NC}"
+fi
+
+# Build Spanish cheat sheet
+if [ -f "KEYMAP-CHEATSHEET-ES.md" ]; then
+    build_cheatsheet \
+        "es" \
+        "KEYMAP-CHEATSHEET-ES.md" \
+        "nicFW880-KeyMap-ES-${VERSION}.pdf" \
+        "Key Mapping Cheat Sheet (Spanish)"
+else
+    echo -e "${YELLOW}Note: KEYMAP-CHEATSHEET-ES.md not found, skipping${NC}"
+fi
+
+# Build English menu cheat sheet
+if [ -f "MENU-CHEATSHEET-EN.md" ]; then
+    build_cheatsheet \
+        "en" \
+        "MENU-CHEATSHEET-EN.md" \
+        "nicFW880-Menu-EN-${VERSION}.pdf" \
+        "Menu Structure Cheat Sheet (English)"
+else
+    echo -e "${YELLOW}Note: MENU-CHEATSHEET-EN.md not found, skipping${NC}"
+fi
+
+# Build Spanish menu cheat sheet
+if [ -f "MENU-CHEATSHEET-ES.md" ]; then
+    build_cheatsheet \
+        "es" \
+        "MENU-CHEATSHEET-ES.md" \
+        "nicFW880-Menu-ES-${VERSION}.pdf" \
+        "Menu Structure Cheat Sheet (Spanish)"
+else
+    echo -e "${YELLOW}Note: MENU-CHEATSHEET-ES.md not found, skipping${NC}"
+fi
+
 echo -e "${GREEN}================================${NC}"
 echo -e "${GREEN}Build complete!${NC}"
 echo ""
