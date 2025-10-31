@@ -2,10 +2,10 @@
 
 ## Descripción General
 
-La funcionalidad APRS (Automatic Packet Reporting System) se introdujo en BETA 04E y ha sido mejorada continuamente hasta BETA 06A. APRS permite enviar y recibir balizas de ubicación y otros datos de paquetes.
+La funcionalidad APRS (Automatic Packet Reporting System) se introdujo en BETA 04E y ha sido mejorada continuamente hasta BETA 06B. APRS permite enviar y recibir balizas de ubicación y otros datos de paquetes.
 
 **Primera introducción:** BETA 04E
-**Últimas actualizaciones:** BETA 06A
+**Últimas actualizaciones:** BETA 06B
 
 ⚠️ **Importante:** APRS está en desarrollo continuo. Las características se añaden de forma incremental.
 
@@ -16,17 +16,18 @@ La funcionalidad APRS (Automatic Packet Reporting System) se introdujo en BETA 0
 - Decodificación de balizas APRS estándar
 - Decodificación de balizas APRS comprimidas
 - Decodificación de balizas MIC-E (BETA 04F+)
-- Desempaquetado de paquetes APRS-IS (BETA 06)
-- Decodificación de paquetes meteorológicos (BETA 06)
+- Desempaquetado de paquetes APRS-IS (BETA 06B)
+- Decodificación de paquetes meteorológicos (BETA 06B)
 
 ### Transmisión de Balizas
 - Balizas manuales (PTT + S1, o SP-1 durante TX en BETA 06+)
 - Balizas automáticas (basadas en tiempo o distancia)
 - Balizas PTT (inicio/fin de transmisión)
 
-### Navegador de Balizas Escuchadas (BETA 06+)
+### Navegador de Balizas Escuchadas (BETA 06B+)
 - Acceso a balizas APRS recibidas desde modo radio (función de usuario)
 - Ver datos meteorológicos de paquetes meteorológicos recibidos
+- Navegar información meteorológica decodificada
 
 ## Configuración
 
@@ -107,7 +108,7 @@ Cuando se configura:
 - Las balizas manuales y balizas PTT siempre se envían en el VFO activo
 - No usar squelch override en el VFO configurado para APRS (BETA 05C+)
 - Squelch override no se puede activar en VFO asignado a APRS si Hear Tones está desactivado (BETA 05D)
-- Si la decodificación APRS está deshabilitada pero se asigna un VFO APRS, ese VFO será excluido del multiwatch (BETA 06)
+- Si la decodificación APRS está deshabilitada pero se asigna un VFO APRS, ese VFO será excluido del multiwatch (BETA 06B)
 
 ## Iconos APRS
 

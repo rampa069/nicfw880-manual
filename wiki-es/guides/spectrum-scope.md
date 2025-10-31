@@ -98,7 +98,7 @@ Monitorea automáticamente señales por encima de cierto nivel.
 
 **Indicador visual:** Aparece línea azul en el scope mostrando nivel de trigger
 
-### Función Set Trigger (BETA 06+)
+### Función Set Trigger (BETA 06B+)
 
 **Acceso:** Via Menú de Funciones (LP-GREEN) → Set Trigger
 
@@ -132,7 +132,7 @@ También seleccionable via menú de funciones.
 
 Funciona igual que cuando se escanea.
 
-### Actualizaciones BETA 06
+### Actualizaciones BETA 06B
 
 **Set Ignore (SP #):** Nueva opción en menú de funciones para ignorar/excluir frecuencias
 - Accesible vía Menú de Funciones (LP-GREEN)

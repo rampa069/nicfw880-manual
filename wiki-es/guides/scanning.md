@@ -105,7 +105,7 @@ Escanear entre dos límites de frecuencia en modo VFO.
 ### Escaneo de Canal
 Escanear a través de canales programados.
 
-**Actualización BETA 06 - Comportamiento del Relé HF:**
+**Actualización BETA 06B - Comportamiento del Relé HF:**
 El escaneo de canales ya no causa que el relé HF se active/desactive durante el escaneo. El primer canal escaneado ahora define si el escaneo opera en modo HF o no-HF, evitando el toggle del relé durante todo el escaneo.
 
 ### Escaneo de Preset (ALPHA 19+)

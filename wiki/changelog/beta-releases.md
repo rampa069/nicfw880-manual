@@ -606,6 +606,47 @@ Now HF band-switch relay suppressed during Multiwatch checks. Active VFO dominan
 
 ---
 
-**End of BETA Releases (as of BETA 06A)**
+## BETA 06B
+
+### APRS Enhancements
+
+**Manual Beacon in Radio Mode:**
+- Manual Beacon sending (SP-1 during TX) now possible in regular radio mode
+- No need to go into GPS mode anymore
+
+**Heard Beacon Browser:**
+- Heard Beacon browser now accessible from radio mode (User function)
+
+**APRS-IS Unwrapping:**
+- Unwrapping of APRS-IS packets implemented
+
+**Weather Packets:**
+- Weather packets should now be decoded
+- Weather popup and user function for recalling weather data
+
+**APRS VFO Multiwatch Exclusion:**
+- If APRS decoding is disabled, but an APRS VFO is assigned, that VFO will be excluded from multiwatch
+
+### Scanning Improvements
+
+**Channel Scan HF Relay:**
+- Channel scan now no longer causes the HF relay to toggle
+- The first channel scanned defines if the scan is operating in HF or non-HF
+
+### Spectrum Scope Function Menu
+
+**Set Trigger:**
+- Now functional: If no trigger is set, it sets one at level 6
+- If a trigger is set it clears it
+
+**Added Set Ignore:**
+- Accessible via SP-# key
+
+**Added Freq → VFO:**
+- Accessible via PTT key
+
+---
+
+**End of BETA Releases (as of BETA 06B)**
 
 For information on specific features, see the [User Guides](../guides/) section.

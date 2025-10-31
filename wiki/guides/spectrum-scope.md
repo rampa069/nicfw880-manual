@@ -98,7 +98,7 @@ Automatically monitor signals above a certain level.
 
 **Visual indicator:** Blue line appears on scope showing trigger level
 
-### Set Trigger Function (BETA 06+)
+### Set Trigger Function (BETA 06B+)
 
 **Access:** Via Function Menu (LP-GREEN) → Set Trigger
 
@@ -132,7 +132,7 @@ Also selectable via the function menu.
 
 Works the same as when scanning.
 
-### BETA 06 Updates
+### BETA 06B Updates
 
 **Set Ignore (SP #):** New function menu option to ignore/exclude frequencies
 - Accessible via Function Menu (LP-GREEN)
