@@ -226,6 +226,33 @@ Configurar a 'Startup' para forzar entrada de PIN al encender para máxima segur
 
 ---
 
+## Auto Lock
+
+**(BETA 07+)**
+
+Bloquea automáticamente el teclado después de un período especificado de inactividad.
+
+**Ruta:** Advanced → Auto Lock
+
+**Configuraciones:**
+- **0:** Deshabilitado (el teclado nunca se bloquea automáticamente)
+- **1-9 segundos:** Tratado como mínimo 10 segundos
+- **10+ segundos:** El teclado se bloquea después del tiempo especificado
+
+### Cómo Funciona
+
+Después del tiempo especificado sin presiones de teclas, el teclado se bloquea automáticamente.
+
+Presiona cualquier tecla para desbloquear (o introduce PIN si el PIN está habilitado).
+
+### Casos de Uso
+
+- **Operación portátil:** Prevenir presiones accidentales de teclas cuando la radio está en bolsillo/bolso
+- **Seguridad:** Combinar con PIN para bloqueo de seguridad automático
+- **Ahorro de batería:** Combinado con "Wake LCD On: Keys Only" para conservación de energía
+
+---
+
 ## Wake LCD On
 
 **(BETA 03+)**

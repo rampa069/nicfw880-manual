@@ -2,10 +2,10 @@
 
 ## Overview
 
-The APRS (Automatic Packet Reporting System) functionality was introduced in BETA 04E and has been continuously improved through BETA 06B. APRS allows you to send and receive location beacons and other packet data.
+The APRS (Automatic Packet Reporting System) functionality was introduced in BETA 04E and has been continuously improved through BETA 07. APRS allows you to send and receive location beacons and other packet data.
 
 **First introduced:** BETA 04E
-**Latest updates:** BETA 06B
+**Latest updates:** BETA 07
 
 ⚠️ **Important:** APRS is in continuous development. Features are added incrementally.
 
@@ -93,16 +93,24 @@ Transmitted beacon location accuracy.
 
 **Note:** 20m is the best accuracy for MIC-E, which has a resolution of 1/100th of a minute (about 18m).
 
-### VFO Selection for APRS (BETA 05D+)
+### APRS Enable and VFO Selection (BETA 07+)
 
-**Path:** Main Menu → APRS → Use VFO
+**Path:** Main Menu → APRS → Enabled (formerly "Use VFO" in BETA 05D-06B)
 
-You may select a specific VFO (A, B, or C) for automatic beacon APRS operation.
+Configure how APRS operates:
 
-When set:
-- The selected VFO will display an APRS icon
-- All automatic beacons will be sent via this VFO
-- This VFO will be muted if "Hear Tones" is set to Off (mute icon shown)
+**Options:**
+- **Off:** All APRS functions disabled
+- **VFO-A / VFO-B / VFO-C:** Assigns specific VFO for APRS (**recommended**)
+  - Enables VFO Muting, Filtering, and Side Button compatibility
+  - Does not affect manual beacons or PTT-ID style beacons
+  - The selected VFO will display an APRS icon
+  - All automatic beacons sent via this VFO
+  - This VFO will be muted if "Hear Tones" is set to Off (mute icon shown)
+- **Active VFO:** APRS uses currently active VFO
+  - Disables side buttons and EMG button
+  - Does not apply filtering
+  - Does not mute APRS sounds being received
 
 ⚠️ **Important:**
 - Manual beacons and PTT beacons are always sent on the active VFO
@@ -198,10 +206,10 @@ Delay time if Persist probability check fails.
 ## Troubleshooting
 
 ### Side Buttons Stop Working (BETA 05C)
-**Cause:** Squelch is open while APRS decoding is active.
+**Cause:** Squelch is open while APRS decoding is active, or Active VFO mode is selected (BETA 07+).
 
 **Fix:**
-- Requires Main Menu → APRS → Use VFO to be set to A, B or C
+- Requires Main Menu → APRS → Enabled to be set to VFO-A, VFO-B, or VFO-C (not Active VFO)
 - Do not use squelch override on the VFO that's set for APRS
 
 **Additional Protection (BETA 05D):**

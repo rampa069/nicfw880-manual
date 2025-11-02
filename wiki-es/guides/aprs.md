@@ -2,10 +2,10 @@
 
 ## Descripción General
 
-La funcionalidad APRS (Automatic Packet Reporting System) se introdujo en BETA 04E y ha sido mejorada continuamente hasta BETA 06B. APRS permite enviar y recibir balizas de ubicación y otros datos de paquetes.
+La funcionalidad APRS (Automatic Packet Reporting System) se introdujo en BETA 04E y ha sido mejorada continuamente hasta BETA 07. APRS permite enviar y recibir balizas de ubicación y otros datos de paquetes.
 
 **Primera introducción:** BETA 04E
-**Últimas actualizaciones:** BETA 06B
+**Últimas actualizaciones:** BETA 07
 
 ⚠️ **Importante:** APRS está en desarrollo continuo. Las características se añaden de forma incremental.
 
@@ -93,16 +93,24 @@ Precisión de la ubicación de baliza transmitida.
 
 **Nota:** 20m es la mejor precisión para MIC-E, que tiene una resolución de 1/100 de minuto (aproximadamente 18m).
 
-### Selección de VFO para APRS (BETA 05D+)
+### Habilitación APRS y Selección de VFO (BETA 07+)
 
-**Ruta:** Main Menu → APRS → Use VFO
+**Ruta:** Main Menu → APRS → Enabled (anteriormente "Use VFO" en BETA 05D-06B)
 
-Puedes seleccionar un VFO específico (A, B o C) para la operación automática de balizas APRS.
+Configura cómo opera APRS:
 
-Cuando se configura:
-- El VFO seleccionado mostrará un icono APRS
-- Todas las balizas automáticas se enviarán a través de este VFO
-- Este VFO se silenciará si "Hear Tones" está configurado en Off (se muestra icono de silencio)
+**Opciones:**
+- **Off:** Todas las funciones APRS deshabilitadas
+- **VFO-A / VFO-B / VFO-C:** Asigna VFO específico para APRS (**recomendado**)
+  - Habilita Silenciamiento VFO, Filtrado y compatibilidad Botones Laterales
+  - No afecta balizas manuales o balizas estilo PTT-ID
+  - El VFO seleccionado mostrará un icono APRS
+  - Todas las balizas automáticas se envían vía este VFO
+  - Este VFO se silenciará si "Hear Tones" está configurado en Off (se muestra icono de silencio)
+- **Active VFO:** APRS usa el VFO actualmente activo
+  - Deshabilita botones laterales y botón EMG
+  - No aplica filtrado
+  - No silencia los sonidos APRS que se reciben
 
 ⚠️ **Importante:**
 - Las balizas manuales y balizas PTT siempre se envían en el VFO activo
@@ -202,10 +210,10 @@ Tiempo de retardo si falla la verificación de probabilidad Persist.
 ## Solución de Problemas
 
 ### Los Botones Laterales Dejan de Funcionar (BETA 05C)
-**Causa:** El squelch está abierto mientras la decodificación APRS está activa.
+**Causa:** El squelch está abierto mientras la decodificación APRS está activa, o modo Active VFO está seleccionado (BETA 07+).
 
 **Solución:**
-- Requiere Main Menu → APRS → Use VFO configurado en A, B o C
+- Requiere Main Menu → APRS → Enabled configurado en VFO-A, VFO-B, o VFO-C (no Active VFO)
 - No usar squelch override en el VFO configurado para APRS
 
 **Protección adicional (BETA 05D):**

@@ -226,6 +226,33 @@ Set to 'Startup' to force PIN entry on power up for maximum security.
 
 ---
 
+## Auto Lock
+
+**(BETA 07+)**
+
+Automatically locks the keypad after a specified period of inactivity.
+
+**Path:** Advanced → Auto Lock
+
+**Settings:**
+- **0:** Disabled (keypad never auto-locks)
+- **1-9 seconds:** Treated as 10 seconds minimum
+- **10+ seconds:** Keypad locks after specified time
+
+### How It Works
+
+After the specified time of no key presses, the keypad automatically locks.
+
+Press any key to unlock (or enter PIN if PIN is enabled).
+
+### Use Cases
+
+- **Portable operation:** Prevent accidental key presses when radio is in pocket/bag
+- **Security:** Combine with PIN for automatic security lockout
+- **Battery saving:** Combined with "Wake LCD On: Keys Only" for power conservation
+
+---
+
 ## Wake LCD On
 
 **(BETA 03+)**

@@ -647,6 +647,56 @@ Ahora relé de conmutación de banda HF suprimido durante verificaciones Multiwa
 
 ---
 
-**Fin de Versiones BETA (hasta BETA 06B)**
+## BETA 07
+
+### Reestructuración Menú APRS
+
+**APRS → Enabled (anteriormente "Use VFO"):**
+- Menú renombrado de "Use VFO" a "Enabled"
+- **Off:** Todas las funciones APRS deshabilitadas
+- **VFO-A/VFO-B/VFO-C:** Asigna VFO específico para APRS (recomendado)
+  - Habilita Silenciamiento VFO, Filtrado y compatibilidad Botones Laterales
+  - No afecta balizas manuales o balizas estilo PTT-ID
+- **Active VFO:** APRS usa el VFO actualmente activo
+  - Deshabilita botones laterales y botón EMG
+  - No aplica filtrado ni silencia sonidos APRS
+
+### Control Potencia TX
+
+**Nuevas Funciones Tecla/Usuario:**
+- **TX Power Up:** Aumentar potencia de transmisión
+- **TX Power Down:** Disminuir potencia de transmisión
+
+### Mejoras de Menú
+
+**Menú Nombre Canal:**
+- Menú 'CMS → Channel Name' ahora también aparece en 'Channel → Channel Name'
+
+### Cambios de Sistema
+
+**Factory Restore:**
+- Procedimiento previo "Default Settings" (encender manteniendo EMG) renombrado a "Factory Restore"
+- Ahora realiza BORRADO COMPLETO de todas las áreas nicFW del almacenamiento flash
+
+**Auto Lock:**
+- Nuevo menú: 'Advanced → Auto Lock'
+- Define número de segundos antes de que el teclado se bloquee automáticamente
+- Mínimo: 10 segundos (valores menores 1-9 pueden configurarse pero se tratan como 10)
+- 0 = Deshabilitado
+
+### Características RMS
+
+**Codeplug Combinado:**
+- RMS ahora soporta codeplug combinado
+- Nota: Ajuste de potencia, UI, Fuentes y Logo de inicio no son parte del codeplug
+- Pestaña Settings no disponible hasta salir de BETA
+
+**Edición Band Plan:**
+- Añadida edición Band Plan del lado de la radio
+- **Ruta:** Main Menu → Band Plan
+
+---
+
+**Fin de Versiones BETA (hasta BETA 07)**
 
 Para información sobre características específicas, ver sección [Guías de Usuario](../guides/).

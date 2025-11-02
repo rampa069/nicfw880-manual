@@ -65,7 +65,7 @@ PDF versions available in releases: `nicFW880-Menu-EN-{version}.pdf` / `nicFW880
 
 - **Firmware Author**: [nicsure on Patreon](https://www.patreon.com/c/nicsure/posts)
 - **RMS Software**: [nicfw880-rms-builder on GitHub](https://github.com/nicsure/nicfw880-rms-builder/)
-- **Latest Version**: BETA 06B (as of documentation compilation)
+- **Latest Version**: BETA 07 (as of documentation compilation)
 
 ## 📋 Supported Hardware
 
@@ -140,7 +140,7 @@ All firmware terms and brand names are property of their respective owners.
 | Main README | ✅ | ✅ | 1 + 1 |
 | **Total** | **18** | **18** | **36 files** |
 
-**Coverage**: ALPHA 12 through BETA 06B
+**Coverage**: ALPHA 12 through BETA 07
 
 ---
 

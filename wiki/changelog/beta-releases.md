@@ -647,6 +647,56 @@ Now HF band-switch relay suppressed during Multiwatch checks. Active VFO dominan
 
 ---
 
-**End of BETA Releases (as of BETA 06B)**
+## BETA 07
+
+### APRS Menu Restructure
+
+**APRS → Enabled (formerly "Use VFO"):**
+- Menu renamed from "Use VFO" to "Enabled"
+- **Off:** All APRS functions disabled
+- **VFO-A/VFO-B/VFO-C:** Assigns specific VFO for APRS (recommended)
+  - Enables VFO Muting, Filtering, and Side Button compatibility
+  - Does not affect manual beacons or PTT-ID style beacons
+- **Active VFO:** APRS uses currently active VFO
+  - Disables side buttons and EMG button
+  - Does not apply filtering or mute APRS sounds
+
+### TX Power Control
+
+**New Key/User Functions:**
+- **TX Power Up:** Increase transmit power
+- **TX Power Down:** Decrease transmit power
+
+### Menu Improvements
+
+**Channel Name Menu:**
+- 'CMS → Channel Name' menu now also appears in 'Channel → Channel Name'
+
+### System Changes
+
+**Factory Restore:**
+- Previous "Default Settings" procedure (power on holding EMG) renamed to "Factory Restore"
+- Now performs FULL WIPE of all nicFW related areas of flash storage
+
+**Auto Lock:**
+- New menu: 'Advanced → Auto Lock'
+- Defines number of seconds before keypad automatically locks
+- Minimum: 10 seconds (smaller values 1-9 may be set but treated as 10)
+- 0 = Disabled
+
+### RMS Features
+
+**Combined Codeplug:**
+- RMS now supports combined codeplug
+- Note: Power tuning, UI, Fonts & Startup Logo are not part of codeplug
+- Settings tab not available until out of BETA
+
+**Band Plan Editing:**
+- Radio-side Band Plan editing added
+- **Path:** Main Menu → Band Plan
+
+---
+
+**End of BETA Releases (as of BETA 07)**
 
 For information on specific features, see the [User Guides](../guides/) section.
