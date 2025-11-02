@@ -175,7 +175,7 @@ Provides context-sensitive quick access to:
 - **PTT** = Push To Talk
 - Keys can be remapped via **Main Menu → Keys**
 - User functions configurable via **Function Menu**
-- For detailed documentation see: [Manual](https://github.com/your-repo)
+- For detailed documentation see: [Manual](https://github.com/rampa069/nicfw880-manual)
 
 ---
 

@@ -150,7 +150,7 @@ build_manual() {
     local wiki_dir=$2
     local output_file=$3
     local title=$4
-    local author=${5:-"nicsure"}
+    local author=${5:-"Marcus Dudley (nicsure)"}
 
     echo -e "${YELLOW}Building $title...${NC}"
 

@@ -175,7 +175,7 @@ Proporciona acceso rápido contextual a:
 - **PTT** = Pulsar Para Hablar
 - Teclas remapeables vía **Main Menu → Keys**
 - Funciones usuario configurables vía **Menú Funciones**
-- Documentación detallada: [Manual](https://github.com/your-repo)
+- Documentación detallada: [Manual](https://github.com/rampa069/nicfw880-manual)
 
 ---
 

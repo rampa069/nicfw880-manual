@@ -48,7 +48,7 @@ header-includes: |
 | Hear Tones | Hacer APRS audible | On/Off |
 | Digipeater Path | Configuración de ruta | Off/WIDE1-1/WIDE2-2/AX.25 |
 | AX.25 Digipeater | Indicativo para ruta AX.25 | Predeterminado: ARISS |
-| Use VFO | Asignar VFO para APRS | A/B/C |
+| Enabled | Modo de operación APRS | Off/VFO-A/VFO-B/VFO-C/Active VFO |
 | Ambiguity | Precisión de ubicación | 20m/200m/2km |
 | Filter | Filtro AF para VFO APRS | On/Off |
 | **Modo KISS** | | |
@@ -100,6 +100,7 @@ header-includes: |
 | Audio Boost | Aumentar ganancia de audio | On/Off |
 | PIN | Configurar PIN de seguridad | - |
 | PIN Action | Cuándo requerir PIN | Normal/Startup |
+| Auto Lock | Tiempo bloqueo automático teclado | 0=Off, 10+ segundos (mín 10) |
 | Wake LCD On | Disparador despertar LCD | Keys Only/RX/TX/All |
 
 ### Squelch
@@ -149,11 +150,16 @@ header-includes: |
 | Selección font | Elegir fuente de visualización | - |
 | Configuración UI | Personalización de layout | - |
 
+### Band Plan
+| Configuración | Descripción | Valores/Rango |
+|---------------|-------------|---------------|
+| Edición Band Plan | Configurar límites banda frecuencia | Edición lado radio |
+
 ### System
 | Configuración | Descripción | Valores/Rango |
 |---------------|-------------|---------------|
 | Shut Down | Apagado seguro (guarda cambios pendientes) | - |
-| Factory Reset | Restablecer a valores de fábrica | Mantener EMG al encender |
+| Factory Restore | Borrado completo áreas flash nicFW | Mantener EMG al encender |
 | Versión firmware | Mostrar info de versión | - |
 
 ---
@@ -207,4 +213,4 @@ header-includes: |
 
 ---
 
-**Firmware:** nicFW880 | **Última:** BETA 06A | **Autor:** nicsure
+**Firmware:** nicFW880 | **Última:** BETA 07 | **Autor:** nicsure
