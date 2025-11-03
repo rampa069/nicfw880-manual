@@ -695,8 +695,34 @@ Ahora relé de conmutación de banda HF suprimido durante verificaciones Multiwa
 - Añadida edición Band Plan del lado de la radio
 - **Ruta:** Main Menu → Band Plan
 
+### Actualización BETA 07B
+
+**¿Qué pasó con 07A?**
+No preguntes, está en un lugar mejor ahora.
+
+**Mejoras APRS:**
+- Resuelto el problema de caracteres faltantes en callsign de 6 caracteres y SSID de 2 caracteres
+- Las rutas de digipeater Mic-E ahora son AX.25 regulares
+  - Ningún repetidor parece reconocer rutas genéricas Mic-E, así que se hicieron estándar
+
 ---
 
-**Fin de Versiones BETA (hasta BETA 07)**
+## BETA 07C
+
+### Corrección de Errores
+
+**Correcciones Band Plan:**
+- Corregidos caracteres espurios en nombres de Band Plan
+- Selección de número de índice de band plan ahora termina correctamente en 19
+  - ⚠️ **Advertencia:** Si previamente configuraste un valor superior a 19, es posible que hayas corrompido tu almacenamiento flash
+  - Recomendación: Realizar un factory restore
+
+**Mejoras de Estabilidad:**
+- Posible corrección para el problema de bloqueo "Wrap"
+  - Nota: Esta corrección es una suposición ya que el desarrollador no puede reproducir el problema localmente
+
+---
+
+**Fin de Versiones BETA (hasta BETA 07C)**
 
 Para información sobre características específicas, ver sección [Guías de Usuario](../guides/).

@@ -3,14 +3,14 @@ title: "nicFW880 Key Shortcuts Cheat Sheet"
 subtitle: "Quick Reference for RT-880 / RT-880G / UV-98 Plus"
 author: "nicsure"
 date: "2025"
-version: "BETA 06A"
+version: "BETA 07C"
 geometry: margin=1.5cm
 fontsize: 9pt
 ---
 
 # nicFW880 Key Shortcuts Cheat Sheet
 
-**Firmware Version:** BETA 06A | **Radio Models:** RT-880, RT-880G, iRadio UV-98 Plus
+**Firmware Version:** BETA 07C | **Radio Models:** RT-880, RT-880G, iRadio UV-98 Plus
 
 ---
 
@@ -138,6 +138,13 @@ Provides context-sensitive quick access to:
 - Mode-specific operations
 - Toggle settings
 - Navigation shortcuts
+
+### Assignable User Functions (BETA 07+)
+- **TX Power Up** - Increase transmit power
+- **TX Power Down** - Decrease transmit power
+- **Heard Beacon Browser** - View APRS beacons
+- **Weather Data** - View received weather
+- And many more...
 
 ---
 

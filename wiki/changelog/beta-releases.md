@@ -695,8 +695,34 @@ Now HF band-switch relay suppressed during Multiwatch checks. Active VFO dominan
 - Radio-side Band Plan editing added
 - **Path:** Main Menu → Band Plan
 
+### BETA 07B Update
+
+**What happened to 07A?**
+Don't ask, it's in a better place now.
+
+**APRS Improvements:**
+- Solved the 6 character callsign and 2 character SSID missing character problem
+- Mic-E digipeater paths are now regular AX.25
+  - No repeaters seem to recognize Mic-E generic paths, so made them standard
+
 ---
 
-**End of BETA Releases (as of BETA 07)**
+## BETA 07C
+
+### Bug Fixes
+
+**Band Plan Fixes:**
+- Fixed spurious characters in Band Plan names
+- Band plan index number selection now correctly ends at 19
+  - ⚠️ **Warning:** If you previously set a value above 19, you may have corrupted your flash storage
+  - Recommendation: Perform a factory restore
+
+**Stability Improvements:**
+- Potential fix for the "Wrap" lockup issue
+  - Note: This fix is a guess as the developer cannot reproduce the issue locally
+
+---
+
+**End of BETA Releases (as of BETA 07C)**
 
 For information on specific features, see the [User Guides](../guides/) section.

@@ -232,6 +232,8 @@ Muchas funciones long-press pueden ser reasignadas vía el sistema de menú:
 - GPS Module
 - Si4732 Tuner
 - Frequency Counter
+- TX Power Up (BETA 07+)
+- TX Power Down (BETA 07+)
 - Varias otras funciones
 
 **Configuración:** Verificar Main Menu → User Keys (o similar, ruta exacta puede variar)
@@ -265,4 +267,4 @@ Para un listado condensado de todos los atajos, ver [Referencia Atajos de Teclad
 
 ## Historial de Versiones
 
-Los mapeos de teclas han evolucionado significativamente a través de versiones. Esta guía refleja los mapeos más recientes (BETA 05G). Para información específica de versión, ver el [Changelog](../changelog/).
+Los mapeos de teclas han evolucionado significativamente a través de versiones. Esta guía refleja los mapeos más recientes (BETA 07C). Para información específica de versión, ver el [Changelog](../changelog/).

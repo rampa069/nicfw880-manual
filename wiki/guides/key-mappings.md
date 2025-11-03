@@ -232,6 +232,8 @@ Many long-press functions can be reassigned via the menu system:
 - GPS Module
 - Si4732 Tuner
 - Frequency Counter
+- TX Power Up (BETA 07+)
+- TX Power Down (BETA 07+)
 - Various other functions
 
 **Configuration:** Check Main Menu → User Keys (or similar, exact path may vary)
@@ -265,4 +267,4 @@ For a condensed listing of all shortcuts, see [Key Shortcuts Reference](../refer
 
 ## Version History
 
-Key mappings have evolved significantly across versions. This guide reflects the latest (BETA 05G) mappings. For version-specific information, see the [Changelog](../changelog/).
+Key mappings have evolved significantly across versions. This guide reflects the latest (BETA 07C) mappings. For version-specific information, see the [Changelog](../changelog/).
