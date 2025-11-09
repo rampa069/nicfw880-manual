@@ -18,9 +18,10 @@ Organizadas por característica y funcionalidad:
 - [Repetidor Crossband](guides/crossband-repeater.md)
 
 ### [Registro de Versiones](changelog/)
-Historial completo de versiones de más antiguo a más nuevo:
-- [Versiones ALPHA](changelog/alpha-releases.md) (ALPHA 12 → ALPHA 19)
-- [Versiones BETA](changelog/beta-releases.md) (BETA 01 → BETA 05G)
+Historial de versiones y notas de lanzamiento:
+- **[Versiones Oficiales](changelog/releases.md)** ⭐ - Versiones estables (registro principal)
+- [Versiones BETA](changelog/beta-releases.md) - Versiones de prueba en desarrollo (BETA 01 → BETA 07C)
+- [Versiones ALPHA](changelog/alpha-releases.md) - Versiones de desarrollo temprano (ALPHA 12 → ALPHA 19)
 
 ### [Referencia Rápida](reference/)
 - [Todos los Atajos de Teclado](reference/key-shortcuts.md)
@@ -50,7 +51,7 @@ Versiones de RMS disponibles para:
 
 ## 📖 Acerca de Este Manual
 
-Este manual está compilado a partir de las notas oficiales de lanzamiento del Patreon de nicFW880 y está organizado por función en lugar de cronológicamente. Para cambios específicos de cada versión, consulta la sección [Registro de Versiones](changelog/).
+Este manual documenta la **última versión estable (v5.08.01)** de nicFW880. Está compilado a partir de las notas oficiales de Patreon y organizado por función. Para versiones de desarrollo (BETA/ALPHA), consulta la sección [Registro de Versiones](changelog/).
 
 **Creado por:** Esfuerzo de la comunidad basado en los posts de Patreon de nicsure
 **Desarrollador del Firmware:** Marcus Dudley (nicsure)
@@ -58,8 +59,9 @@ Este manual está compilado a partir de las notas oficiales de lanzamiento del P
 
 ---
 
-**Última Versión Cubierta:** BETA 05G
-**Última Actualización:** Octubre 2024
+🎉 **Última Versión Estable:** [v5.08.01](changelog/releases.md) (7 de noviembre de 2025)
+**Versiones de Desarrollo Anteriores:** BETA 01-07C, ALPHA 12-19
+**Última Actualización:** Noviembre 2025
 
 ---
 

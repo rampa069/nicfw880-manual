@@ -723,6 +723,16 @@ Don't ask, it's in a better place now.
 
 ---
 
-**End of BETA Releases (as of BETA 07C)**
+## 🎉 Official Release
+
+**BETA cycle concluded with v5.08.01 Release (November 7, 2025)**
+
+All BETA features have been consolidated into the first official stable release. See [Official Releases](releases.md) for details.
+
+The BETA development cycle ran from September to November 2025, introducing and testing all major features that are now part of the stable firmware.
+
+---
+
+**End of BETA Releases**
 
 For information on specific features, see the [User Guides](../guides/) section.

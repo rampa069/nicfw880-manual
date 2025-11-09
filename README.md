@@ -20,13 +20,19 @@
 - **[Getting Started](wiki/README.md)** - Main navigation
 - **[User Guides](wiki/guides/)** - APRS, GPS, DTMF, Scanning, Spectrum Scope, and more
 - **[Reference](wiki/reference/)** - Menu structure, key shortcuts, troubleshooting
-- **[Changelog](wiki/changelog/)** - ALPHA and BETA version history
+- **[Changelog](wiki/changelog/)** - Version history
+  - **[Official Releases](wiki/changelog/releases.md)** ⭐ - Stable versions (main changelog)
+  - [BETA Releases](wiki/changelog/beta-releases.md) - Development testing versions
+  - [ALPHA Releases](wiki/changelog/alpha-releases.md) - Early development versions
 
 ### Manual en Español
 - **[Inicio](wiki-es/README.md)** - Navegación principal
 - **[Guías de Usuario](wiki-es/guides/)** - APRS, GPS, DTMF, Escaneo, Spectrum Scope, y más
 - **[Referencia](wiki-es/reference/)** - Estructura de menús, atajos de teclado, solución de problemas
-- **[Registro de Cambios](wiki-es/changelog/)** - Historial de versiones ALPHA y BETA
+- **[Registro de Cambios](wiki-es/changelog/)** - Historial de versiones
+  - **[Versiones Oficiales](wiki-es/changelog/releases.md)** ⭐ - Versiones estables (registro principal)
+  - [Versiones BETA](wiki-es/changelog/beta-releases.md) - Versiones de prueba en desarrollo
+  - [Versiones ALPHA](wiki-es/changelog/alpha-releases.md) - Versiones de desarrollo temprano
 
 ## 🎯 Quick Access
 
@@ -65,7 +71,10 @@ PDF versions available in releases: `nicFW880-Menu-EN-{version}.pdf` / `nicFW880
 
 - **Firmware Author**: [nicsure on Patreon](https://www.patreon.com/c/nicsure/posts)
 - **RMS Software**: [nicfw880-rms-builder on GitHub](https://github.com/nicsure/nicfw880-rms-builder/)
-- **Latest Version**: BETA 07C (as of documentation compilation)
+- **Latest Stable Release**: 🎉 **v5.08.01** (November 7, 2025) - [Release Notes](wiki/changelog/releases.md)
+- **Previous Development Versions**: BETA 01-07C, ALPHA 12-19
+
+> **Note**: This manual documents the **latest stable release (v5.08.01)**. For development version history, see the [changelog](wiki/changelog/).
 
 ## 📋 Supported Hardware
 
@@ -78,10 +87,12 @@ PDF versions available in releases: `nicFW880-Menu-EN-{version}.pdf` / `nicFW880
 ## 📦 What's Included
 
 This manual covers:
-- ✅ Complete feature documentation
+- ✅ Complete feature documentation for **v5.08.01** (stable release)
 - ✅ Step-by-step guides for all major features
 - ✅ Troubleshooting for common issues
-- ✅ Full version history (ALPHA 12-19, BETA 01-07C)
+- ✅ Version history:
+  - **Official Releases** (stable versions) - [v5.08.01 Release Notes](wiki/changelog/releases.md)
+  - Development history (ALPHA 12-19, BETA 01-07C) in separate changelogs
 - ✅ Calibration procedures
 - ✅ Key mappings and shortcuts
 - ✅ Menu structure reference
@@ -135,12 +146,14 @@ All firmware terms and brand names are property of their respective owners.
 | Section | English | Español | Files |
 |---------|---------|---------|-------|
 | Guides | ✅ | ✅ | 10 + 10 |
-| Changelog | ✅ | ✅ | 2 + 2 |
+| Changelog | ✅ | ✅ | 3 + 3 |
 | Reference | ✅ | ✅ | 5 + 5 |
 | Main README | ✅ | ✅ | 1 + 1 |
-| **Total** | **18** | **18** | **36 files** |
+| **Total** | **19** | **19** | **38 files** |
 
-**Coverage**: ALPHA 12 through BETA 07C
+**Coverage**:
+- **Stable releases**: Ready for v1.0
+- **Development versions**: ALPHA 12-19, BETA 01-07C (in separate changelogs)
 
 ---
 

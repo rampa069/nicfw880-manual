@@ -723,6 +723,16 @@ No preguntes, está en un lugar mejor ahora.
 
 ---
 
-**Fin de Versiones BETA (hasta BETA 07C)**
+## 🎉 Versión Oficial
+
+**El ciclo BETA concluyó con la Versión v5.08.01 (7 de noviembre de 2025)**
+
+Todas las características BETA han sido consolidadas en la primera versión estable oficial. Ver [Versiones Oficiales](releases.md) para detalles.
+
+El ciclo de desarrollo BETA se ejecutó de septiembre a noviembre de 2025, introduciendo y probando todas las características principales que ahora forman parte del firmware estable.
+
+---
+
+**Fin de Versiones BETA**
 
 Para información sobre características específicas, ver sección [Guías de Usuario](../guides/).

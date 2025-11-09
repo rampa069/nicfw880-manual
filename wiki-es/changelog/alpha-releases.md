@@ -313,4 +313,6 @@ Acción Long-press Scan Preset Menu no añadida en RMS aún. Si quieres reconfig
 
 **Fin de Versiones ALPHA**
 
-Siguiente serie de lanzamientos: [Versiones BETA](beta-releases.md)
+El ciclo de desarrollo ALPHA concluyó en septiembre de 2025, dando paso a [Versiones BETA](beta-releases.md).
+
+Todas las características desarrolladas a través de los ciclos ALPHA y BETA fueron consolidadas en **v5.08.01** - la primera versión estable oficial. Ver [Versiones Oficiales](releases.md) para detalles.
