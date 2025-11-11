@@ -11,8 +11,8 @@
 
 | Language | Manual | Status |
 |----------|--------|--------|
-| 🇬🇧 English | [wiki/](wiki/) | ✅ Complete (18 files) |
-| 🇪🇸 Español | [wiki-es/](wiki-es/) | ✅ Completo (18 archivos) |
+| 🇬🇧 English | [wiki/](wiki/) | ✅ Complete (19 files) |
+| 🇪🇸 Español | [wiki-es/](wiki-es/) | ✅ Completo (19 archivos) |
 
 ## 📖 Documentation
 
@@ -46,6 +46,7 @@
 - [GPS Navigation (EN)](wiki/guides/gps.md) | [(ES)](wiki-es/guides/gps.md)
 - [Spectrum Scope (EN)](wiki/guides/spectrum-scope.md) | [(ES)](wiki-es/guides/spectrum-scope.md)
 - [Calibration (EN)](wiki/guides/calibration.md) | [(ES)](wiki-es/guides/calibration.md)
+- [RMS Remote Protocol (EN)](wiki/guides/rms-remote-protocol.md) | [(ES)](wiki-es/guides/rms-remote-protocol.md) - Technical docs
 
 ## 📋 Quick Reference Cheat Sheets
 
@@ -145,14 +146,14 @@ All firmware terms and brand names are property of their respective owners.
 
 | Section | English | Español | Files |
 |---------|---------|---------|-------|
-| Guides | ✅ | ✅ | 10 + 10 |
+| Guides | ✅ | ✅ | 11 + 11 |
 | Changelog | ✅ | ✅ | 3 + 3 |
 | Reference | ✅ | ✅ | 5 + 5 |
 | Main README | ✅ | ✅ | 1 + 1 |
-| **Total** | **19** | **19** | **38 files** |
+| **Total** | **20** | **20** | **40 files** |
 
 **Coverage**:
-- **Stable releases**: Ready for v1.0
+- **Stable release**: v5.08.01 (includes RMS Remote Protocol documentation)
 - **Development versions**: ALPHA 12-19, BETA 01-07C (in separate changelogs)
 
 ---

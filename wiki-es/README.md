@@ -14,6 +14,7 @@ Organizadas por característica y funcionalidad:
 - [Analizador de Espectro (Spectrum Scope)](guides/spectrum-scope.md)
 - [Funciones de Escaneo](guides/scanning.md)
 - [Calibración y Configuración](guides/calibration.md)
+- [Protocolo Remoto RMS](guides/rms-remote-protocol.md) - Documentación técnica para control remoto
 - [Multiwatch](guides/multiwatch.md)
 - [Repetidor Crossband](guides/crossband-repeater.md)
 

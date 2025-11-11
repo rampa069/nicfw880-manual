@@ -14,6 +14,7 @@ Organized by feature and functionality:
 - [Spectrum Scope](guides/spectrum-scope.md)
 - [Scanning Features](guides/scanning.md)
 - [Calibration & Setup](guides/calibration.md)
+- [RMS Remote Protocol](guides/rms-remote-protocol.md) - Technical documentation for remote control
 - [Multiwatch](guides/multiwatch.md)
 - [Crossband Repeater](guides/crossband-repeater.md)
 
