@@ -27,7 +27,9 @@ Each release entry includes:
 
 This is the first production-ready release of nicFW880, consolidating all features from the extensive BETA development cycle into a stable, tested firmware.
 
-### What's New in This Release
+### What's New in v5.08.01
+
+This release was mainly to level things out of beta, but includes several upgrades to functionality.
 
 **Maidenhead Locator System**
 - Added support for Maidenhead grid square locator system
@@ -38,9 +40,65 @@ This is the first production-ready release of nicFW880, consolidating all featur
 - Provides more scrambling options for secure communications
 
 **RMS (Radio Management Software) Enhancements**
-- New 'Settings' Tab - comprehensive configuration interface
+- New 'Settings' Tab - comprehensive configuration interface (this was a lot of work)
 - New 'Calibration' Tab - streamlined calibration procedures
-- Significant preparation work for mainstream release
+- In preparation for the first mainstream release
+
+### v5.08.01A Update
+
+**GPS Improvements**
+- Added 'Main Menu → GPS → Off While TX'
+  - Turns GPS off when you transmit to help reduce audio interference on TX audio
+
+**Reception Enhancements**
+- Decreased Long Wave reception limit to 100 kHz
+
+**FM Tuner - "Spirit Box" Sweep Mode**
+- Added sweep mode in FM tuner (70-108 MHz)
+- LP-0 to start a fast sweep
+- Press any key during fast sweep to stop
+
+**RMS Updates**
+- CHIRP .csv channel export function
+
+### v5.08.01AA (RMS Update)
+
+**CHIRP Export Improvements**
+- Fixed 'N/T' channels export
+- 'WFM' and 'WAM' now export correctly as just 'FM' and 'AM'
+- Added user dialog when channels have only single side privacy codes set
+  - Choose between using cross mode or setting TX and RX privacy codes to the same
+
+**Settings Tab Fixes**
+- Fixed 'APRS Popup Time' decimal place issue
+
+### v5.08.01B Update
+
+**Scanning Improvements**
+- Improved the "Scan TX Too?" setting
+- Fixed issue where channels could be saved back after scanning in a reversed state
+
+**Display Options**
+- Added "Menu → Display → Heartbeat Style"
+  - Choose between flashing the Green/Red LED or the Keypad
+
+**RMS Channel Management**
+- Added "Insert" and "Delete" to channel list right click menu
+
+### v5.08.01C Update
+
+**RT-880 Scan Performance**
+- Improved VFO ultra scan speed (optimized for BK4819 chip characteristics)
+- Channel scanning now entirely skips any channel that would need to toggle the band relay
+
+**Bug Fixes**
+- Fixed Maidenhead locator bug regarding negative longitude/latitude
+- Fixed GPS navigation bug with negative longitude locations
+  - Many thanks to Wayne WA2N for his help getting to the bottom of this
+
+**New Features**
+- Added "Menu → Scan → Save Ignores"
+  - Allows excluded frequencies to persist
 
 ### Core Features (from BETA cycle)
 

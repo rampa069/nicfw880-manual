@@ -27,7 +27,9 @@ Cada entrada de versión incluye:
 
 Esta es la primera versión lista para producción de nicFW880, consolidando todas las características del extenso ciclo de desarrollo BETA en un firmware estable y probado.
 
-### Novedades de Esta Versión
+### Novedades de v5.08.01
+
+Esta versión se realizó principalmente para nivelar las cosas fuera de beta, pero incluye varias mejoras de funcionalidad.
 
 **Sistema de Localización Maidenhead**
 - Añadido soporte para el sistema de localización por cuadrícula Maidenhead
@@ -38,9 +40,65 @@ Esta es la primera versión lista para producción de nicFW880, consolidando tod
 - Proporciona más opciones de scrambling para comunicaciones seguras
 
 **Mejoras en RMS (Radio Management Software)**
-- Nueva pestaña 'Settings' - interfaz de configuración completa
+- Nueva pestaña 'Settings' - interfaz de configuración completa (esto fue mucho trabajo)
 - Nueva pestaña 'Calibration' - procedimientos de calibración simplificados
-- Trabajo significativo de preparación para lanzamiento mainstream
+- En preparación para el primer lanzamiento mainstream
+
+### Actualización v5.08.01A
+
+**Mejoras de GPS**
+- Añadido 'Menú Principal → GPS → Off While TX'
+  - Apaga el GPS cuando transmites para ayudar a reducir la interferencia de audio en TX
+
+**Mejoras de Recepción**
+- Límite de recepción de Onda Larga reducido a 100 kHz
+
+**Sintonizador FM - Modo de Barrido "Spirit Box"**
+- Añadido modo de barrido en sintonizador FM (70-108 MHz)
+- LP-0 para iniciar un barrido rápido
+- Presiona cualquier tecla durante el barrido rápido para detener
+
+**Actualizaciones de RMS**
+- Función de exportación de canales CHIRP .csv
+
+### v5.08.01AA (Actualización de RMS)
+
+**Mejoras de Exportación CHIRP**
+- Canales 'N/T' corregidos en exportación
+- 'WFM' y 'WAM' ahora exportan correctamente como solo 'FM' y 'AM'
+- Añadido diálogo de usuario cuando los canales tienen solo códigos de privacidad de un lado configurados
+  - Elegir entre usar modo cruzado o configurar códigos de privacidad TX y RX al mismo
+
+**Correcciones de Pestaña de Configuración**
+- Corregido problema de posición decimal en 'APRS Popup Time'
+
+### Actualización v5.08.01B
+
+**Mejoras de Escaneo**
+- Mejorada la configuración "Scan TX Too?"
+- Corregido problema donde los canales podían guardarse después de escanear en estado invertido
+
+**Opciones de Pantalla**
+- Añadido "Menú → Display → Heartbeat Style"
+  - Elegir entre parpadear el LED Verde/Rojo o el Teclado
+
+**Gestión de Canales RMS**
+- Añadido "Insert" y "Delete" al menú del clic derecho de lista de canales
+
+### Actualización v5.08.01C
+
+**Rendimiento de Escaneo RT-880**
+- Mejorada velocidad de escaneo ultra VFO (optimizado para características del chip BK4819)
+- El escaneo de canales ahora omite completamente cualquier canal que necesite alternar el relé de banda
+
+**Correcciones de Errores**
+- Corregido error del localizador Maidenhead con respecto a longitud/latitud negativa
+- Corregido error de navegación GPS con ubicaciones de longitud negativa
+  - Muchas gracias a Wayne WA2N por su ayuda para resolver esto
+
+**Nuevas Características**
+- Añadido "Menú → Scan → Save Ignores"
+  - Permite que las frecuencias excluidas persistan
 
 ### Características Principales (del ciclo BETA)
 
