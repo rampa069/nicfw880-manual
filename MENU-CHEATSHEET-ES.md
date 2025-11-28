@@ -117,7 +117,7 @@ header-includes: |
 | Noise Hysteresis | Buffer de estabilidad de ruido | 0-20 |
 | Signal Hysteresis | Buffer de estabilidad de señal | 0-20 |
 | Squelch Throttle | Retardo mín entre cambios estado | Unidades 0.1s |
-| Squelch Tail | Verificaciones consecutivas antes cerrar | - |
+| Squelch Tail | Tiempo para mantener squelch abierto tras perder señal | Segundos |
 | Squelch Tail Elimination | Aplicar STE | RX/TX/Both |
 
 ### Si4732 Tuner

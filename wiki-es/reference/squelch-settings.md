@@ -132,29 +132,29 @@ Squelch se cierra → No puede cambiar estado por 0.5 segundos
 
 **(ALPHA 18a+)**
 
-Determina cuántas verificaciones consecutivas deben confirmar que el squelch debe cerrarse antes de que realmente lo haga.
+La cantidad de tiempo en segundos para mantener el squelch abierto después de perder la señal.
 
 ### Efecto
 
-- Previene que el squelch se cierre demasiado rápido debido a caídas breves de señal
-- Proporciona operación más suave requiriendo condiciones consistentes antes de cerrar
+- Mantiene el squelch abierto durante el tiempo especificado después de perder la señal
+- Previene que el squelch se cierre inmediatamente en caídas breves de señal
+- Proporciona audio más suave durante señales con desvanecimiento o intermitentes
 
 ### Sobrescritura
 
-Esta configuración es **sobrescrita por Noise Ceiling**, que cerrará el squelch inmediatamente si se excede.
+Esta configuración es **sobrescrita por Noise Ceiling**. Si el nivel de ruido excede el Noise Ceiling, el squelch se cierra instantáneamente sin importar la configuración de Squelch Tail.
 
 ### Ejemplo
 
 ```
-Squelch Tail: 3
+Squelch Tail: 2 (segundos)
 
-Señal cae por debajo del umbral → Verificación 1
-Señal aún baja → Verificación 2
-Señal aún baja → Verificación 3
-Después de 3 verificaciones consecutivas → Squelch se cierra
+Se pierde la señal → Squelch permanece abierto por 2 segundos
+  - Si la señal regresa en 2 segundos → Audio continúa sin interrupción
+  - Si la señal no regresa después de 2 segundos → Squelch se cierra
+
+Excepción: Si el ruido excede Noise Ceiling → Squelch se cierra inmediatamente
 ```
-
-Si la señal regresa durante las verificaciones, contador se reinicia.
 
 ---
 

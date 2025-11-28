@@ -132,29 +132,29 @@ Squelch closes → Cannot change state for 0.5 seconds
 
 **(ALPHA 18a+)**
 
-Determines how many consecutive checks must confirm that the squelch should close before it actually does.
+The amount of time in seconds to keep the squelch open after loss of signal.
 
 ### Effect
 
-- Prevents the squelch from closing too quickly due to brief signal drops
-- Provides smoother operation by requiring consistent conditions before closing
+- Keeps the squelch open for the specified duration after the signal is lost
+- Prevents the squelch from closing immediately on brief signal drops
+- Provides smoother audio during fading or intermittent signals
 
 ### Override
 
-This setting is **overridden by the Noise Ceiling**, which will close the squelch immediately if exceeded.
+This setting is **overridden by the Noise Ceiling**. If the noise level exceeds the Noise Ceiling, the squelch closes instantly regardless of the Squelch Tail setting.
 
 ### Example
 
 ```
-Squelch Tail: 3
+Squelch Tail: 2 (seconds)
 
-Signal drops below threshold → Check 1
-Signal still low → Check 2
-Signal still low → Check 3
-After 3 consecutive checks → Squelch closes
+Signal is lost → Squelch stays open for 2 seconds
+  - If signal returns within 2 seconds → Audio continues uninterrupted
+  - If signal doesn't return after 2 seconds → Squelch closes
+
+Exception: If noise exceeds Noise Ceiling → Squelch closes immediately
 ```
-
-If signal returns during checks, counter resets.
 
 ---
 
