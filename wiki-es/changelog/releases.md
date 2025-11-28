@@ -21,6 +21,47 @@ Cada entrada de versión incluye:
 
 <!-- Las nuevas versiones se añadirán debajo de esta línea, las más recientes primero -->
 
+## Versión 5.08.02B (28 de noviembre de 2025)
+
+Esta versión continúa la serie estable v5.08 con mejoras de escaneo y nuevas características.
+
+### Novedades de v5.08.02B
+
+**Mejoras de Escaneo**
+- Actualización completa de pantalla después de detener un escaneo
+- Añadido "Menú → Scanning → Smart Scan"
+  - Aumenta el número de hits durante un escaneo VFO priorizando frecuencias que previamente han tenido actividad
+  - Compromiso: Esto ralentizará la velocidad del escaneo secuencial subyacente
+
+### Actualización v5.08.02A
+
+**Corrección de Exclusiones de Escaneo**
+- Corregido problema con exclusiones de escaneo no añadiéndose correctamente a la lista
+
+**Cambios de Menú**
+- Renombrado 'Menú → Scanning → Ultra Scan' a 'UScan Level'
+- Añadido 'Menú → Scanning → UScan Time'
+  - Define la cantidad de tiempo en microsegundos que Ultra Scan espera después de cambiar frecuencia antes de verificar el nivel de señal
+  - Predeterminado: 1500 (no cambiar a menos que esté dispuesto a experimentar extensivamente)
+  - Configurar este valor muy bajo causará que Ultra Scan no detecte nada
+
+**Nueva Característica**
+- Añadido 'Menú → Scanning → Scan Return' por solicitud
+  - Define qué sucede cuando se detiene un escaneo:
+    - **Last Signal** - Configura el VFO a la última frecuencia/canal donde se encontró una señal
+    - **Start** - Configura el VFO a la frecuencia o canal de inicio del escaneo
+    - **Last Scanned** - Deja el VFO configurado en la frecuencia/canal que se escaneó último
+
+### Actualización v5.08.02
+
+**Mejoras RMS**
+- Las Exclusiones de Escaneo ahora son editables desde el RMS
+
+**Cambios de Unidades**
+- Unidades de distancia Imperial cambiadas a Pies/Millas
+
+---
+
 ## Versión 5.08.01 (7 de noviembre de 2025)
 
 🎉 **Primera Versión Estable Oficial**

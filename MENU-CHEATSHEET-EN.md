@@ -73,6 +73,11 @@ header-includes: |
 | Load | Load scan preset | - |
 | Save | Save current scan configuration | - |
 | Delete | Delete scan preset | - |
+| Save Ignores | Persist excluded frequencies | On/Off |
+| UScan Level | Ultra scan signal level | - |
+| UScan Time | Wait time before signal check | Microseconds (default: 1500) |
+| Scan Return | Action when scan stops | Last Signal/Start/Last Scanned |
+| Smart Scan | Prioritize previously active frequencies | On/Off |
 
 ### Calibration
 | Setting | Description | Values/Range |
@@ -213,4 +218,4 @@ header-includes: |
 
 ---
 
-**Firmware:** nicFW880 | **Latest:** v5.08.01 | **Author:** nicsure
+**Firmware:** nicFW880 | **Latest:** v5.08.02B | **Author:** nicsure

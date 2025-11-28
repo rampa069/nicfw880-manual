@@ -723,9 +723,13 @@ Don't ask, it's in a better place now.
 
 ---
 
-## 🎉 Official Release
+## 🎉 Official Releases
 
-**BETA cycle concluded with v5.08.01 Release (November 7, 2025)**
+**v5.08.02B Released (November 28, 2025)**
+
+Scanning improvements release with Smart Scan feature and enhanced scan controls. See [Official Releases](releases.md) for details.
+
+**v5.08.01 Released (November 7, 2025)**
 
 All BETA features have been consolidated into the first official stable release. See [Official Releases](releases.md) for details.
 

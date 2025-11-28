@@ -73,6 +73,11 @@ header-includes: |
 | Load | Cargar preset de escaneo | - |
 | Save | Guardar configuración de escaneo actual | - |
 | Delete | Eliminar preset de escaneo | - |
+| Save Ignores | Persistir frecuencias excluidas | On/Off |
+| UScan Level | Nivel de señal ultra scan | - |
+| UScan Time | Tiempo espera antes verificar señal | Microsegundos (default: 1500) |
+| Scan Return | Acción cuando escaneo se detiene | Last Signal/Start/Last Scanned |
+| Smart Scan | Priorizar frecuencias previamente activas | On/Off |
 
 ### Calibration
 | Configuración | Descripción | Valores/Rango |
@@ -213,4 +218,4 @@ header-includes: |
 
 ---
 
-**Firmware:** nicFW880 | **Última:** v5.08.01 | **Autor:** nicsure
+**Firmware:** nicFW880 | **Última:** v5.08.02B | **Autor:** nicsure

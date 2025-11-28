@@ -3,14 +3,14 @@ title: "Chuleta de Atajos de Teclas nicFW880"
 subtitle: "Referencia Rápida para RT-880 / RT-880G / UV-98 Plus"
 author: "nicsure"
 date: "2025"
-version: "BETA 07C"
+version: "v5.08.02B"
 geometry: margin=1.5cm
 fontsize: 9pt
 ---
 
 # Chuleta de Atajos de Teclas nicFW880
 
-**Versión Firmware:** BETA 07C | **Modelos:** RT-880, RT-880G, iRadio UV-98 Plus
+**Versión Firmware:** v5.08.02B | **Modelos:** RT-880, RT-880G, iRadio UV-98 Plus
 
 ---
 

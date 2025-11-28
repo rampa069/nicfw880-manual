@@ -723,9 +723,13 @@ No preguntes, está en un lugar mejor ahora.
 
 ---
 
-## 🎉 Versión Oficial
+## 🎉 Versiones Oficiales
 
-**El ciclo BETA concluyó con la Versión v5.08.01 (7 de noviembre de 2025)**
+**v5.08.02B Lanzada (28 de noviembre de 2025)**
+
+Versión con mejoras de escaneo incluyendo la función Smart Scan y controles de escaneo mejorados. Ver [Versiones Oficiales](releases.md) para detalles.
+
+**v5.08.01 Lanzada (7 de noviembre de 2025)**
 
 Todas las características BETA han sido consolidadas en la primera versión estable oficial. Ver [Versiones Oficiales](releases.md) para detalles.
 

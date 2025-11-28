@@ -21,6 +21,47 @@ Each release entry includes:
 
 <!-- New releases will be added below this line, newest first -->
 
+## Version 5.08.02B (November 28, 2025)
+
+This release continues the stable v5.08 series with scanning improvements and new features.
+
+### What's New in v5.08.02B
+
+**Scanning Enhancements**
+- Full display refresh after stopping a scan
+- Added "Menu → Scanning → Smart Scan"
+  - Increases the number of hits during a VFO scan by prioritizing frequencies that have previously seen activity
+  - Trade-off: This will slow down the speed of the underlying sequential scan
+
+### v5.08.02A Update
+
+**Scan Exclusions Fix**
+- Fixed issue with scan exclusions not being added to the list correctly
+
+**Menu Changes**
+- Renamed 'Menu → Scanning → Ultra Scan' to 'UScan Level'
+- Added 'Menu → Scanning → UScan Time'
+  - Defines the amount of time in microseconds that Ultra Scan waits after changing frequency before checking the signal level
+  - Default: 1500 (do not change unless willing to experiment extensively)
+  - Setting this value too low will cause Ultra Scan not to detect anything
+
+**New Feature**
+- Added 'Menu → Scanning → Scan Return' by request
+  - Defines what happens when a scan is stopped:
+    - **Last Signal** - Sets the VFO to the last frequency/channel where a signal was found
+    - **Start** - Sets the VFO to the scan's starting frequency or channel
+    - **Last Scanned** - Leaves the VFO set to whatever frequency/channel was last scanned
+
+### v5.08.02 Update
+
+**RMS Improvements**
+- Scan Exclusions now editable from the RMS
+
+**Unit Changes**
+- Imperial distance units changed to Feet/Miles
+
+---
+
 ## Version 5.08.01 (November 7, 2025)
 
 🎉 **First Official Stable Release**
