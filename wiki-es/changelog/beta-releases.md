@@ -725,6 +725,10 @@ No preguntes, está en un lugar mejor ahora.
 
 ## 🎉 Versiones Oficiales
 
+**v5.08.02C Lanzada (2 de diciembre de 2025)**
+
+Protección de VFO APRS, mejoras del scope para modo canal y actualizaciones del navegador de waypoints GPS. Ver [Versiones Oficiales](releases.md) para detalles.
+
 **v5.08.02B Lanzada (28 de noviembre de 2025)**
 
 Versión con mejoras de escaneo incluyendo la función Smart Scan y controles de escaneo mejorados. Ver [Versiones Oficiales](releases.md) para detalles.

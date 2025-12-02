@@ -21,11 +21,26 @@ Cada entrada de versión incluye:
 
 <!-- Las nuevas versiones se añadirán debajo de esta línea, las más recientes primero -->
 
-## Versión 5.08.02B (28 de noviembre de 2025)
+## Versión 5.08.02C (2 de diciembre de 2025)
 
-Esta versión continúa la serie estable v5.08 con mejoras de escaneo y nuevas características.
+Esta versión continúa la serie estable v5.08 con mejoras de APRS, mejoras del scope y actualizaciones del navegador de waypoints GPS.
 
-### Novedades de v5.08.02B
+### Novedades de v5.08.02C
+
+**Protección de VFO APRS**
+- El VFO asignado a APRS ahora estará bloqueado contra cambios
+  - Para hacer cambios al VFO APRS primero debes desasignarlo
+- El VFO asignado a APRS no es seleccionable si multiwatch está habilitado
+
+**Mejoras del Spectrum Scope**
+- El scope ahora puede iniciarse en modo canal
+  - Al iniciarse, el canal actualmente seleccionado se copia al modo VFO antes de que el scope se inicie
+
+**Actualizaciones del Navegador de Waypoints GPS**
+- Cambiada tecla 'Edit Name' de LP-GREEN a LP-0
+- Añadido menú de funciones (LP-GREEN) al navegador de Waypoints GPS
+
+### Actualización v5.08.02B
 
 **Mejoras de Escaneo**
 - Actualización completa de pantalla después de detener un escaneo

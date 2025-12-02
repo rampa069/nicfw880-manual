@@ -21,11 +21,26 @@ Each release entry includes:
 
 <!-- New releases will be added below this line, newest first -->
 
-## Version 5.08.02B (November 28, 2025)
+## Version 5.08.02C (December 2, 2025)
 
-This release continues the stable v5.08 series with scanning improvements and new features.
+This release continues the stable v5.08 series with APRS improvements, scope enhancements, and GPS waypoint browser updates.
 
-### What's New in v5.08.02B
+### What's New in v5.08.02C
+
+**APRS VFO Protection**
+- The VFO assigned to APRS will now be locked out from changes
+  - To make changes to the APRS VFO you must first unassign it
+- The VFO assigned to APRS is not selectable if multiwatch is enabled
+
+**Spectrum Scope Improvements**
+- The scope can now be started in channel mode
+  - When started, the currently selected channel is copied to VFO mode before the scope starts up
+
+**GPS Waypoint Browser Updates**
+- Changed 'Edit Name' key from LP-GREEN to LP-0
+- Added function menu (LP-GREEN) to the GPS Waypoint browser
+
+### v5.08.02B Update
 
 **Scanning Enhancements**
 - Full display refresh after stopping a scan

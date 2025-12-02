@@ -218,4 +218,4 @@ header-includes: |
 
 ---
 
-**Firmware:** nicFW880 | **Latest:** v5.08.02B | **Author:** nicsure
+**Firmware:** nicFW880 | **Latest:** v5.08.02C | **Author:** nicsure

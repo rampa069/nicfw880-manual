@@ -3,14 +3,14 @@ title: "nicFW880 Key Shortcuts Cheat Sheet"
 subtitle: "Quick Reference for RT-880 / RT-880G / UV-98 Plus"
 author: "nicsure"
 date: "2025"
-version: "v5.08.02B"
+version: "v5.08.02C"
 geometry: margin=1.5cm
 fontsize: 9pt
 ---
 
 # nicFW880 Key Shortcuts Cheat Sheet
 
-**Firmware Version:** v5.08.02B | **Radio Models:** RT-880, RT-880G, iRadio UV-98 Plus
+**Firmware Version:** v5.08.02C | **Radio Models:** RT-880, RT-880G, iRadio UV-98 Plus
 
 ---
 
@@ -67,6 +67,12 @@ fontsize: 9pt
 
 ### Special
 **PTT + S2** → Transmit GPS location via DTMF
+
+### Waypoint Browser (v5.08.02C+)
+| Key | Function |
+|-----|----------|
+| **LP-GREEN** | Waypoint function menu |
+| **LP-0** | Edit waypoint name |
 
 ---
 

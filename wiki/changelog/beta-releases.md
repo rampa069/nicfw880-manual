@@ -725,6 +725,10 @@ Don't ask, it's in a better place now.
 
 ## 🎉 Official Releases
 
+**v5.08.02C Released (December 2, 2025)**
+
+APRS VFO protection, scope improvements for channel mode, and GPS waypoint browser updates. See [Official Releases](releases.md) for details.
+
 **v5.08.02B Released (November 28, 2025)**
 
 Scanning improvements release with Smart Scan feature and enhanced scan controls. See [Official Releases](releases.md) for details.

@@ -3,14 +3,14 @@ title: "Chuleta de Atajos de Teclas nicFW880"
 subtitle: "Referencia Rápida para RT-880 / RT-880G / UV-98 Plus"
 author: "nicsure"
 date: "2025"
-version: "v5.08.02B"
+version: "v5.08.02C"
 geometry: margin=1.5cm
 fontsize: 9pt
 ---
 
 # Chuleta de Atajos de Teclas nicFW880
 
-**Versión Firmware:** v5.08.02B | **Modelos:** RT-880, RT-880G, iRadio UV-98 Plus
+**Versión Firmware:** v5.08.02C | **Modelos:** RT-880, RT-880G, iRadio UV-98 Plus
 
 ---
 
@@ -67,6 +67,12 @@ fontsize: 9pt
 
 ### Especial
 **PTT + S2** → Transmitir ubicación GPS vía DTMF
+
+### Navegador Waypoints (v5.08.02C+)
+| Tecla | Función |
+|-------|---------|
+| **PL-GREEN** | Menú funciones waypoints |
+| **PL-0** | Editar nombre waypoint |
 
 ---
 
