@@ -6,7 +6,7 @@ GPS functionality was introduced in BETA 02 and significantly expanded in BETA 0
 
 **First introduced:** BETA 02
 **Major update:** BETA 03 (Waypoints & Tracking)
-**Latest updates:** BETA 04A, 05F/05G
+**Latest updates:** v5.09.01 (coordinate format, QRM reduction)
 
 ## Activation
 
@@ -71,6 +71,24 @@ When GPS is active (early versions):
 **This must be ON for any GPS functions to work.**
 
 If turned off, the radio will use fixed GPS locations (Default GPS Waypoint).
+
+#### Reduce QRM (v5.09.01+)
+**Path:** Main Menu → GPS → Reduce QRM
+
+**Previously:** 'Off While TX' (renamed in v5.09.01)
+
+Allows reduction of QRM (interference) from the GPS chip. Options:
+- **Off** - No QRM reduction
+- **TX** - Reduce QRM during transmit only
+- **RX** - Reduce QRM during receive only
+- **Both** - Reduce QRM during both TX and RX
+
+#### Coordinate Display Format (v5.09.01+)
+**Key:** LP-0 in GPS module (added to GPS Functions)
+
+Switches coordinate display format between:
+- **Decimal Degrees** - e.g., 51.5074° N, 0.1278° W
+- **Degrees/Minutes** - e.g., 51° 30.44' N, 0° 7.67' W
 
 #### Default GPS Waypoint (BETA 04E+)
 
@@ -220,3 +238,4 @@ Fixed smearing issue on fixed compass rotation mode.
 - **BETA 04F:** Integration with APRS Beacon List
 - **BETA 05D:** GPS icon status indicators
 - **BETA 05G:** Improved distance calculation with latitude correction
+- **v5.09.01:** Coordinate display format toggle (Dec/DegMin), 'Reduce QRM' setting (replaces 'Off While TX')

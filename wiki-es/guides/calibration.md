@@ -61,6 +61,18 @@ Ajusta finamente el oscilador de cristal para transmisión y recepción de frecu
 - Si notas deriva de frecuencia
 - Para trabajo de precisión (acceso a repetidor, modos digitales)
 
+### Calibración de Frecuencia por Banda (v5.09.01+)
+
+**Nuevo en v5.09.01:** Ahora puedes calibrar cada paso de banda de 50 MHz individualmente con un offset de frecuencia.
+
+**Notas importantes:**
+- Esta característica es ajustable **SOLO en el RMS** (no editable desde la radio)
+- El ajuste 'XTAL 671' se aplica **DESPUÉS** del ajuste por banda
+- Idealmente, la única configuración 'XTAL 671' debería ser todo lo que necesitas para calibrar correctamente una radio
+- Si necesitas usar la característica por banda, es posible que no estés calibrando correctamente con XTAL671
+
+**Caso de uso:** Para radios con calibración de frecuencia que varía significativamente entre bandas, esto permite ajuste fino en diferentes rangos de frecuencia.
+
 ### Equipo Necesario
 
 - Dos radios (una para calibrar, una como referencia)
@@ -254,4 +266,5 @@ Si la calibración sale mal:
 - **ALPHA 17:** Mejoras en calibración de histéresis de squelch
 - **BETA 3B:** Stepping de 8.33 kHz corregido
 - **ALPHA 19:** Icono de carga añadido
+- **v5.09.01:** Offset de calibración de frecuencia por banda (solo RMS)
 - **Todas las versiones:** Calibración de batería disponible

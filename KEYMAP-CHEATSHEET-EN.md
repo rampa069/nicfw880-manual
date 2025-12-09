@@ -3,14 +3,14 @@ title: "nicFW880 Key Shortcuts Cheat Sheet"
 subtitle: "Quick Reference for RT-880 / RT-880G / UV-98 Plus"
 author: "nicsure"
 date: "2025"
-version: "v5.08.02C"
+version: "v5.09.01"
 geometry: margin=1.5cm
 fontsize: 9pt
 ---
 
 # nicFW880 Key Shortcuts Cheat Sheet
 
-**Firmware Version:** v5.08.02C | **Radio Models:** RT-880, RT-880G, iRadio UV-98 Plus
+**Firmware Version:** v5.09.01 | **Radio Models:** RT-880, RT-880G, iRadio UV-98 Plus
 
 ---
 
@@ -60,6 +60,7 @@ fontsize: 9pt
 | Key | Function |
 |-----|----------|
 | **LP-GREEN** | GPS function menu |
+| **LP-0** | Toggle coordinate format (Dec/DegMin) |
 | **LP-1** | Set tracking radius / Edit Lat° |
 | **LP-2** | Edit Lon° |
 | **LP-4** | Set target to current / Lat sign |

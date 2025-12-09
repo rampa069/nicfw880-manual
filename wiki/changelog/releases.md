@@ -21,6 +21,49 @@ Each release entry includes:
 
 <!-- New releases will be added below this line, newest first -->
 
+## Version 5.09.01 (December 9, 2025)
+
+This is a new major version release with GPS improvements, APRS enhancements, and calibration features.
+
+**Note:** A settings reset is recommended. Without a reset, newly introduced settings and features may not be initialized properly.
+
+### What's New in v5.09.01
+
+**Multi-PTT APRS Behavior**
+- When Multi-PTT is active and VFO-B/VFO-C is assigned to APRS, the PTT button for that VFO will return to regular assigned function operation
+
+**GPS Coordinate Display Format**
+- Added 'Dec / DegMin' to GPS Functions (LP-0)
+- Switches coordinate display format between decimal degrees and degrees/minutes
+
+**GPS QRM Reduction**
+- 'Menu → GPS → Off While TX' changed to 'Reduce QRM'
+- Now allows reduction of QRM from the GPS chip during TX, RX or both
+
+**S1 Key Fix**
+- Attempted fix for spurious activation of key S1 (typically assigned to Squelch Override)
+- Addresses user reports of spontaneous squelch override
+
+**Per Band Frequency Calibration**
+- Per band frequency calibration offset added
+- Calibrate every 50 MHz band step individually with a frequency offset
+- Adjustable in the RMS ONLY (not editable from radio)
+- Note: The 'XTAL 671' adjustment is applied AFTER per band adjustment
+
+**APRS Beacon History Improvements**
+- Beacon history capacity increased from 30 to 50
+- Beacon history now works like a queue instead of a rolling list
+  - Latest beacon received is always placed at position #1
+  - Everything else shifts up
+- Beacon history is now saved to flash storage
+  - Received beacons persist after power down
+
+**RMS Batch Channel Naming**
+- You may now enter a number after '%' to set the start of batch numerical channel names
+- Example: Entering 'PMR %15' would start the number from 15 instead of 1
+
+---
+
 ## Version 5.08.02C (December 2, 2025)
 
 This release continues the stable v5.08 series with APRS improvements, scope enhancements, and GPS waypoint browser updates.

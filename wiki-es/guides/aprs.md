@@ -5,7 +5,7 @@
 La funcionalidad APRS (Automatic Packet Reporting System) se introdujo en BETA 04E y ha sido mejorada continuamente hasta BETA 07. APRS permite enviar y recibir balizas de ubicación y otros datos de paquetes.
 
 **Primera introducción:** BETA 04E
-**Últimas actualizaciones:** BETA 07
+**Últimas actualizaciones:** v5.09.01 (mejoras del historial de balizas)
 
 ⚠️ **Importante:** APRS está en desarrollo continuo. Las características se añaden de forma incremental.
 
@@ -130,6 +130,16 @@ Configura cómo opera APRS:
 
 ## Lista de Balizas (BETA 04F+)
 
+### Mejoras del Historial de Balizas (v5.09.01+)
+
+**Capacidad:** Aumentada de 30 a **50 balizas**
+
+**Ordenamiento basado en cola:** El historial de balizas ahora funciona como una cola en lugar de una lista rotativa:
+- La última baliza recibida siempre se coloca en la posición #1
+- Todas las demás balizas se desplazan hacia arriba en la lista
+
+**Almacenamiento persistente:** El historial de balizas ahora se guarda en almacenamiento flash. Las balizas recibidas persistirán después de apagar.
+
 ### Acceso a Balizas Escuchadas
 
 **Módulo GPS (BETA 04F+):**
@@ -137,8 +147,6 @@ En el módulo GPS, **SP-6** abre el menú de lista "Heard Beacons" (requiere al 
 
 **Modo Radio (BETA 06+):**
 Navegador de Balizas Escuchadas ahora accesible desde modo radio vía función de usuario.
-
-⚠️ **Nota:** Las balizas escuchadas no se retienen en el almacenamiento.
 
 ### Controles:
 - **UP/DOWN:** Navegar por balizas
@@ -236,3 +244,4 @@ Para balizas basadas en GPS, consulta la [Guía de GPS](gps.md).
 - **BETA 05D:** Iconos APRS/GPS, selección de VFO, Digipeater AX.25, visualización de distancia/rumbo
 - **BETA 05F:** Decodificación de balizas RAW GPS, Estándar y Comprimidas
 - **BETA 05G:** Eliminada opción "Beacon TX" (causaba confusión)
+- **v5.09.01:** Capacidad de historial de balizas aumentada a 50, ordenamiento basado en cola, almacenamiento persistente, mejora del comportamiento Multi-PTT APRS

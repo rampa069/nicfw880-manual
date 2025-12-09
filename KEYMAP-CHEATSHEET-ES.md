@@ -3,14 +3,14 @@ title: "Chuleta de Atajos de Teclas nicFW880"
 subtitle: "Referencia Rápida para RT-880 / RT-880G / UV-98 Plus"
 author: "nicsure"
 date: "2025"
-version: "v5.08.02C"
+version: "v5.09.01"
 geometry: margin=1.5cm
 fontsize: 9pt
 ---
 
 # Chuleta de Atajos de Teclas nicFW880
 
-**Versión Firmware:** v5.08.02C | **Modelos:** RT-880, RT-880G, iRadio UV-98 Plus
+**Versión Firmware:** v5.09.01 | **Modelos:** RT-880, RT-880G, iRadio UV-98 Plus
 
 ---
 
@@ -60,6 +60,7 @@ fontsize: 9pt
 | Tecla | Función |
 |-------|---------|
 | **PL-GREEN** | Menú funciones GPS |
+| **PL-0** | Alternar formato coordenadas (Dec/DegMin) |
 | **PL-1** | Radio rastreo / Editar Lat° |
 | **PL-2** | Editar Lon° |
 | **PL-4** | Target a actual / Signo Lat |

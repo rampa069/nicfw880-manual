@@ -725,6 +725,10 @@ No preguntes, está en un lugar mejor ahora.
 
 ## 🎉 Versiones Oficiales
 
+**v5.09.01 Lanzada (9 de diciembre de 2025)**
+
+Nueva versión mayor con opciones de formato de coordenadas GPS, configuración Reduce QRM, calibración de frecuencia por banda, mejoras del historial de balizas APRS (capacidad de 50, almacenamiento persistente, ordenamiento basado en cola), y mejora de nomenclatura de canales por lotes del RMS. Ver [Versiones Oficiales](releases.md) para detalles.
+
 **v5.08.02C Lanzada (2 de diciembre de 2025)**
 
 Protección de VFO APRS, mejoras del scope para modo canal y actualizaciones del navegador de waypoints GPS. Ver [Versiones Oficiales](releases.md) para detalles.

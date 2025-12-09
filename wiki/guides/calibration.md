@@ -124,6 +124,18 @@ Fine-tune the crystal oscillator for accurate frequency transmission and recepti
 - If you notice frequency drift
 - For precision work (repeater access, digital modes)
 
+### Per Band Frequency Calibration (v5.09.01+)
+
+**New in v5.09.01:** You may now calibrate every 50 MHz band step individually with a frequency offset.
+
+**Important notes:**
+- This feature is adjustable in the **RMS ONLY** (not editable from the radio)
+- The 'XTAL 671' adjustment is applied **AFTER** per band adjustment
+- Ideally, the single 'XTAL 671' setting should be all you need to correctly calibrate a radio
+- If you need to use the per-band feature, you may not be calibrating properly with XTAL671
+
+**Use case:** For radios with frequency calibration that varies significantly across bands, this allows fine-tuning at different frequency ranges.
+
 ### Equipment Needed
 
 - Two radios (one to calibrate, one as reference)
@@ -299,4 +311,5 @@ If calibration goes wrong:
 - **ALPHA 17:** Squelch hysteresis calibration improvements
 - **BETA 3B:** Fixed 8.33 kHz stepping
 - **ALPHA 19:** Charging icon added
+- **v5.09.01:** Per band frequency calibration offset (RMS only)
 - **All versions:** Battery calibration available

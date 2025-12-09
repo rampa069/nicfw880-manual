@@ -6,7 +6,7 @@ La funcionalidad GPS se introdujo en BETA 02 y se expandió significativamente e
 
 **Primera introducción:** BETA 02
 **Actualización mayor:** BETA 03 (Waypoints y Seguimiento)
-**Últimas actualizaciones:** BETA 04A, 05F/05G
+**Últimas actualizaciones:** v5.09.01 (formato de coordenadas, reducción de QRM)
 
 ## Activación
 
@@ -64,6 +64,24 @@ Muestra datos GPS sin procesar:
 **Debe estar ON para que funcionen las funciones GPS.**
 
 Si está desactivado, la radio usará ubicaciones GPS fijas (Default GPS Waypoint).
+
+#### Reduce QRM (v5.09.01+)
+**Ruta:** Main Menu → GPS → Reduce QRM
+
+**Anteriormente:** 'Off While TX' (renombrado en v5.09.01)
+
+Permite reducir QRM (interferencia) del chip GPS. Opciones:
+- **Off** - Sin reducción de QRM
+- **TX** - Reducir QRM solo durante transmisión
+- **RX** - Reducir QRM solo durante recepción
+- **Both** - Reducir QRM durante TX y RX
+
+#### Formato de Visualización de Coordenadas (v5.09.01+)
+**Tecla:** LP-0 en módulo GPS (añadido a Funciones GPS)
+
+Cambia el formato de visualización de coordenadas entre:
+- **Grados Decimales** - ej., 51.5074° N, 0.1278° W
+- **Grados/Minutos** - ej., 51° 30.44' N, 0° 7.67' W
 
 #### Default GPS Waypoint (BETA 04E+)
 
@@ -201,3 +219,4 @@ Problema de manchas corregido en modo de rotación de brújula fija.
 - **BETA 04F:** Integración con Lista de Balizas APRS
 - **BETA 05D:** Indicadores de estado de icono GPS
 - **BETA 05G:** Cálculo de distancia mejorado con corrección de latitud
+- **v5.09.01:** Alternador de formato de coordenadas (Dec/DegMin), configuración 'Reduce QRM' (reemplaza 'Off While TX')

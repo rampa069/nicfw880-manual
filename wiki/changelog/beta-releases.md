@@ -725,6 +725,10 @@ Don't ask, it's in a better place now.
 
 ## 🎉 Official Releases
 
+**v5.09.01 Released (December 9, 2025)**
+
+New major version with GPS coordinate format options, Reduce QRM setting, per-band frequency calibration, APRS beacon history improvements (50 capacity, persistent storage, queue-based ordering), and RMS batch channel naming enhancement. See [Official Releases](releases.md) for details.
+
 **v5.08.02C Released (December 2, 2025)**
 
 APRS VFO protection, scope improvements for channel mode, and GPS waypoint browser updates. See [Official Releases](releases.md) for details.

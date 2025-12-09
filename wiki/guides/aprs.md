@@ -5,7 +5,7 @@
 The APRS (Automatic Packet Reporting System) functionality was introduced in BETA 04E and has been continuously improved through BETA 07. APRS allows you to send and receive location beacons and other packet data.
 
 **First introduced:** BETA 04E
-**Latest updates:** BETA 07
+**Latest updates:** v5.09.01 (beacon history improvements)
 
 ⚠️ **Important:** APRS is in continuous development. Features are added incrementally.
 
@@ -130,6 +130,16 @@ Configure how APRS operates:
 
 ## Beacon List (BETA 04F+)
 
+### Beacon History Improvements (v5.09.01+)
+
+**Capacity:** Increased from 30 to **50 beacons**
+
+**Queue-based ordering:** The beacon history now works like a queue instead of a rolling list:
+- The latest beacon received is always placed at position #1
+- All other beacons shift up in the list
+
+**Persistent storage:** Beacon history is now saved to flash storage. Received beacons will persist after power down.
+
 ### Accessing Heard Beacons
 
 **GPS Module (BETA 04F+):**
@@ -137,8 +147,6 @@ In the GPS module, **SP-6** opens the "Heard Beacons" list menu (requires at lea
 
 **Radio Mode (BETA 06+):**
 Heard Beacon Browser now accessible from radio mode via User function.
-
-⚠️ **Note:** Heard beacons are not retained in storage.
 
 ### Controls:
 - **UP/DOWN:** Browse heard beacons
@@ -232,3 +240,4 @@ For GPS-based beacons, see the [GPS Guide](gps.md).
 - **BETA 05D:** APRS/GPS icons, VFO selection, AX.25 Digipeater, distance/heading display
 - **BETA 05F:** RAW GPS, Standard, and Compressed beacon decoding
 - **BETA 05G:** Removed "Beacon TX" option (was causing confusion)
+- **v5.09.01:** Beacon history capacity increased to 50, queue-based ordering, persistent storage, Multi-PTT APRS behavior improvement

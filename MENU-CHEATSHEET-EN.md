@@ -28,6 +28,7 @@ header-includes: |
 | Setting | Description | Values/Range |
 |---------|-------------|--------------|
 | Enabled | Turn GPS functions on/off | On/Off |
+| Reduce QRM | Reduce GPS chip interference | Off/TX/RX/Both |
 | Point Save | Save current location as waypoint | - |
 | Waypoint management | Browse, edit, delete waypoints | - |
 | Units | Distance units | Imperial/Nautical/Metric |
@@ -218,4 +219,4 @@ header-includes: |
 
 ---
 
-**Firmware:** nicFW880 | **Latest:** v5.08.02C | **Author:** nicsure
+**Firmware:** nicFW880 | **Latest:** v5.09.01 | **Author:** nicsure

@@ -21,6 +21,49 @@ Cada entrada de versión incluye:
 
 <!-- Las nuevas versiones se añadirán debajo de esta línea, las más recientes primero -->
 
+## Versión 5.09.01 (9 de diciembre de 2025)
+
+Esta es una nueva versión mayor con mejoras de GPS, mejoras de APRS y características de calibración.
+
+**Nota:** Se recomienda un reinicio de configuraciones. Sin un reinicio, las configuraciones y características nuevas pueden no inicializarse correctamente.
+
+### Novedades de v5.09.01
+
+**Comportamiento Multi-PTT APRS**
+- Cuando Multi-PTT está activo y VFO-B/VFO-C está asignado a APRS, el botón PTT para ese VFO volverá a operar con la función regular asignada
+
+**Formato de Visualización de Coordenadas GPS**
+- Añadido 'Dec / DegMin' a Funciones GPS (LP-0)
+- Cambia el formato de visualización de coordenadas entre grados decimales y grados/minutos
+
+**Reducción de QRM GPS**
+- 'Menú → GPS → Off While TX' cambiado a 'Reduce QRM'
+- Ahora permite reducción de QRM del chip GPS durante TX, RX o ambos
+
+**Corrección Tecla S1**
+- Intento de corrección para activación espuria de tecla S1 (típicamente asignada a Squelch Override)
+- Aborda reportes de usuarios de squelch override espontáneo
+
+**Calibración de Frecuencia por Banda**
+- Añadido offset de calibración de frecuencia por banda
+- Calibrar cada paso de banda de 50 MHz individualmente con un offset de frecuencia
+- Ajustable SOLO en el RMS (no editable desde la radio)
+- Nota: El ajuste 'XTAL 671' se aplica DESPUÉS del ajuste por banda
+
+**Mejoras del Historial de Balizas APRS**
+- Capacidad del historial de balizas aumentada de 30 a 50
+- El historial de balizas ahora funciona como una cola en lugar de una lista rotativa
+  - La última baliza recibida siempre se coloca en la posición #1
+  - Todo lo demás se desplaza hacia arriba
+- El historial de balizas ahora se guarda en almacenamiento flash
+  - Las balizas recibidas persisten después de apagar
+
+**Nomenclatura por Lotes de Canales RMS**
+- Ahora puedes ingresar un número después de '%' para establecer el inicio de nombres numéricos de canales por lotes
+- Ejemplo: Ingresar 'PMR %15' comenzaría el número desde 15 en lugar de 1
+
+---
+
 ## Versión 5.08.02C (2 de diciembre de 2025)
 
 Esta versión continúa la serie estable v5.08 con mejoras de APRS, mejoras del scope y actualizaciones del navegador de waypoints GPS.
