@@ -72,10 +72,10 @@ PDF versions available in releases: `nicFW880-Menu-EN-{version}.pdf` / `nicFW880
 
 - **Firmware Author**: [nicsure on Patreon](https://www.patreon.com/c/nicsure/posts)
 - **RMS Software**: [nicfw880-rms-builder on GitHub](https://github.com/nicsure/nicfw880-rms-builder/)
-- **Latest Stable Release**: 🎉 **v5.09.01** (December 9, 2025) - [Release Notes](wiki/changelog/releases.md)
-- **Previous Releases**: v5.08.02C, v5.08.02B, v5.08.01, BETA 01-07C, ALPHA 12-19
+- **Latest Stable Release**: 🎉 **v5.09.02** (December 9, 2025) - [Release Notes](wiki/changelog/releases.md)
+- **Previous Releases**: v5.09.01, v5.08.02C, v5.08.02B, v5.08.01, BETA 01-07C, ALPHA 12-19
 
-> **Note**: This manual documents the **latest stable release (v5.09.01)**. For version history, see the [changelog](wiki/changelog/).
+> **Note**: This manual documents the **latest stable release (v5.09.02)**. For version history, see the [changelog](wiki/changelog/).
 
 ## 📋 Supported Hardware
 
@@ -88,11 +88,11 @@ PDF versions available in releases: `nicFW880-Menu-EN-{version}.pdf` / `nicFW880
 ## 📦 What's Included
 
 This manual covers:
-- ✅ Complete feature documentation for **v5.09.01** (stable release)
+- ✅ Complete feature documentation for **v5.09.02** (stable release)
 - ✅ Step-by-step guides for all major features
 - ✅ Troubleshooting for common issues
 - ✅ Version history:
-  - **Official Releases** (stable versions) - [v5.09.01 Release Notes](wiki/changelog/releases.md)
+  - **Official Releases** (stable versions) - [v5.09.02 Release Notes](wiki/changelog/releases.md)
   - Development history (ALPHA 12-19, BETA 01-07C) in separate changelogs
 - ✅ Calibration procedures
 - ✅ Key mappings and shortcuts
@@ -153,8 +153,8 @@ All firmware terms and brand names are property of their respective owners.
 | **Total** | **20** | **20** | **40 files** |
 
 **Coverage**:
-- **Stable release**: v5.09.01 (GPS coordinate format, QRM reduction, per-band calibration, APRS beacon history)
-- **Previous releases**: v5.08.02C, v5.08.02B, v5.08.01
+- **Stable release**: v5.09.02 (APRS beacon timing in seconds, Beacon RX Override, RMS smart scan data)
+- **Previous releases**: v5.09.01, v5.08.02C, v5.08.02B, v5.08.01
 - **Development versions**: ALPHA 12-19, BETA 01-07C (in separate changelogs)
 
 ---

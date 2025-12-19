@@ -3,14 +3,14 @@ title: "nicFW880 Key Shortcuts Cheat Sheet"
 subtitle: "Quick Reference for RT-880 / RT-880G / UV-98 Plus"
 author: "nicsure"
 date: "2025"
-version: "v5.09.01"
+version: "v5.09.02"
 geometry: margin=1.5cm
 fontsize: 9pt
 ---
 
 # nicFW880 Key Shortcuts Cheat Sheet
 
-**Firmware Version:** v5.09.01 | **Radio Models:** RT-880, RT-880G, iRadio UV-98 Plus
+**Firmware Version:** v5.09.02 | **Radio Models:** RT-880, RT-880G, iRadio UV-98 Plus
 
 ---
 

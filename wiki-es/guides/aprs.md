@@ -5,7 +5,7 @@
 La funcionalidad APRS (Automatic Packet Reporting System) se introdujo en BETA 04E y ha sido mejorada continuamente hasta BETA 07. APRS permite enviar y recibir balizas de ubicación y otros datos de paquetes.
 
 **Primera introducción:** BETA 04E
-**Últimas actualizaciones:** v5.09.01 (mejoras del historial de balizas)
+**Últimas actualizaciones:** v5.09.02 (temporización de balizas, RX override)
 
 ⚠️ **Importante:** APRS está en desarrollo continuo. Las características se añaden de forma incremental.
 
@@ -56,13 +56,20 @@ Campo de mensaje ABC MIC-E (estado).
 #### Beacon Comment
 Añade un comentario personalizado (hasta 24 caracteres) con cada baliza.
 
-#### Beacon Time (minutos)
-Minutos entre transmisiones automáticas de balizas de ubicación.
+#### Beacon Time (v5.09.02+: segundos)
+Tiempo entre transmisiones automáticas de balizas de ubicación.
+
+**Cambio v5.09.02:** Esta configuración ahora está en **segundos** en lugar de minutos.
+- ⚠️ **ADVERTENCIA:** La configuración existente NO se convierte automáticamente
+- Si tu configuración anterior era 2 (minutos), ahora será 2 segundos
+- Debes corregir manualmente esta configuración después de actualizar
+- Intervalo mínimo: 10 segundos
+
+#### Beacon RX OV (Beacon RX Override) (v5.09.02+)
+Permite que las balizas programadas interrumpan RX.
 
 #### Beacon Distance (metros)
 Envía una baliza si la radio se ha desplazado más allá de esta distancia desde la última transmisión.
-
-⚠️ **Nota:** Las balizas auto-transmitidas activadas por Beacon Time o Beacon Distance están limitadas a una por minuto.
 
 #### APRS Deviation
 Controla el volumen de los datos APRS. Los valores predeterminados suelen estar bien, pero se pueden ajustar para tu radio específica.
@@ -139,6 +146,10 @@ Configura cómo opera APRS:
 - Todas las demás balizas se desplazan hacia arriba en la lista
 
 **Almacenamiento persistente:** El historial de balizas ahora se guarda en almacenamiento flash. Las balizas recibidas persistirán después de apagar.
+
+**Integración RMS (v5.09.02+):** Las balizas ahora pueden ser leídas por el RMS y copiadas a Waypoints.
+
+**Etiquetas de botones (v5.09.02+):** Ahora se muestran etiquetas de recordatorio de botones en el navegador de balizas.
 
 ### Acceso a Balizas Escuchadas
 
@@ -245,3 +256,4 @@ Para balizas basadas en GPS, consulta la [Guía de GPS](gps.md).
 - **BETA 05F:** Decodificación de balizas RAW GPS, Estándar y Comprimidas
 - **BETA 05G:** Eliminada opción "Beacon TX" (causaba confusión)
 - **v5.09.01:** Capacidad de historial de balizas aumentada a 50, ordenamiento basado en cola, almacenamiento persistente, mejora del comportamiento Multi-PTT APRS
+- **v5.09.02:** Beacon Time ahora en segundos (mínimo 10s), configuración Beacon RX Override, etiquetas de botones del navegador de balizas, lectura de balizas por RMS

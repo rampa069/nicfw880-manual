@@ -725,6 +725,10 @@ Don't ask, it's in a better place now.
 
 ## 🎉 Official Releases
 
+**v5.09.02 Released (December 9, 2025)**
+
+APRS beacon timing changes (now in seconds, minimum 10s), Beacon RX Override setting, beacon browser improvements, RMS smart scan data reading, and audio artifact fix. See [Official Releases](releases.md) for details.
+
 **v5.09.01 Released (December 9, 2025)**
 
 New major version with GPS coordinate format options, Reduce QRM setting, per-band frequency calibration, APRS beacon history improvements (50 capacity, persistent storage, queue-based ordering), and RMS batch channel naming enhancement. See [Official Releases](releases.md) for details.

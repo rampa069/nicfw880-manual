@@ -42,8 +42,9 @@ header-includes: |
 | Popup Time | Popup duration | 0.1-9.9 seconds |
 | Symbol | APRS symbol code | - |
 | Status | MIC-E status field | 0-7 |
-| Beacon Time | Minutes between beacons | Minutes |
+| Beacon Time | Time between beacons | Seconds (min 10) |
 | Beacon Distance | Distance trigger | Metres |
+| Beacon RX OV | Allow beacons to interrupt RX | On/Off |
 | Beacon Comment | Custom text | Up to 24 chars |
 | APRS Deviation | Loudness of APRS data | - |
 | Hear Tones | Make APRS audible | On/Off |
@@ -219,4 +220,4 @@ header-includes: |
 
 ---
 
-**Firmware:** nicFW880 | **Latest:** v5.09.01 | **Author:** nicsure
+**Firmware:** nicFW880 | **Latest:** v5.09.02 | **Author:** nicsure

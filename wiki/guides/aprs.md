@@ -5,7 +5,7 @@
 The APRS (Automatic Packet Reporting System) functionality was introduced in BETA 04E and has been continuously improved through BETA 07. APRS allows you to send and receive location beacons and other packet data.
 
 **First introduced:** BETA 04E
-**Latest updates:** v5.09.01 (beacon history improvements)
+**Latest updates:** v5.09.02 (beacon timing, RX override)
 
 ⚠️ **Important:** APRS is in continuous development. Features are added incrementally.
 
@@ -56,13 +56,20 @@ MIC-E ABC Message field (status).
 #### Beacon Comment
 Add a custom comment (up to 24 characters) with each beacon.
 
-#### Beacon Time (minutes)
-Minutes between automatic location beacon transmissions.
+#### Beacon Time (v5.09.02+: seconds)
+Time between automatic location beacon transmissions.
+
+**v5.09.02 Change:** This setting is now in **seconds** rather than minutes.
+- ⚠️ **WARNING:** The existing setting is NOT converted automatically
+- If your old setting was 2 (minutes), it will now be 2 seconds
+- You must manually correct this setting after updating
+- Minimum interval: 10 seconds
+
+#### Beacon RX OV (Beacon RX Override) (v5.09.02+)
+Allows scheduled beacons to interrupt RX.
 
 #### Beacon Distance (metres)
 Sends a beacon if the radio has traveled beyond this distance since the last transmission.
-
-⚠️ **Note:** Auto-transmitted beacons triggered by Beacon Time or Beacon Distance are throttled to one per minute.
 
 #### APRS Deviation
 Controls the loudness of the APRS data. Defaults are typically fine, but can be adjusted for your specific radio.
@@ -139,6 +146,10 @@ Configure how APRS operates:
 - All other beacons shift up in the list
 
 **Persistent storage:** Beacon history is now saved to flash storage. Received beacons will persist after power down.
+
+**RMS Integration (v5.09.02+):** Beacons can now be read by the RMS and copied to Waypoints.
+
+**Button Labels (v5.09.02+):** Button reminder labels are now shown in the Beacon browser.
 
 ### Accessing Heard Beacons
 
@@ -241,3 +252,4 @@ For GPS-based beacons, see the [GPS Guide](gps.md).
 - **BETA 05F:** RAW GPS, Standard, and Compressed beacon decoding
 - **BETA 05G:** Removed "Beacon TX" option (was causing confusion)
 - **v5.09.01:** Beacon history capacity increased to 50, queue-based ordering, persistent storage, Multi-PTT APRS behavior improvement
+- **v5.09.02:** Beacon Time now in seconds (minimum 10s), Beacon RX Override setting, beacon browser button labels, RMS beacon reading

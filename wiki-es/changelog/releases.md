@@ -21,6 +21,38 @@ Cada entrada de versión incluye:
 
 <!-- Las nuevas versiones se añadirán debajo de esta línea, las más recientes primero -->
 
+## Versión 5.09.02 (9 de diciembre de 2025)
+
+Esta versión sigue a v5.09.01 con cambios en temporización de balizas APRS, mejoras del RMS y correcciones de audio.
+
+**Nota:** Se recomienda un reinicio de configuraciones. Sin un reinicio, las configuraciones nuevas pueden no inicializarse correctamente.
+
+### Novedades de v5.09.02
+
+**Mejoras del Navegador de Balizas**
+- Añadidas etiquetas de recordatorio de botones al navegador de Balizas
+- Las balizas ahora pueden ser leídas por el RMS y copiadas a Waypoints
+
+**Corrección de Audio**
+- Reducido artefacto de audio de fondo cuando el squelch está activado
+
+**Cambios en Temporización de Balizas APRS**
+- Añadido 'Menú → APRS → Beacon RX OV' (Beacon RX Override)
+  - Permite que balizas programadas interrumpan RX
+- **IMPORTANTE:** 'Menú → APRS → Beacon Time' ahora está en **segundos** en lugar de minutos
+  - ⚠️ ADVERTENCIA: La configuración existente NO se convierte a segundos
+  - Si tu configuración anterior era 2 minutos, ahora será 2 segundos
+  - Debes corregir manualmente esta configuración después de actualizar
+- Intervalo mínimo de tiempo de baliza APRS reducido a 10 segundos
+
+**Mejoras del RMS**
+- Corregidas algunas acciones de exportación CHIRP para modos de tono squelch no estándar
+- Añadida una subpágina a la pestaña Scanning que permite leer datos de smart scan
+  - Los datos de smart scan pueden usarse para crear canales
+  - Nota: Los datos de Smart Scan son volátiles y NO sobreviven a un ciclo de apagado
+
+---
+
 ## Versión 5.09.01 (9 de diciembre de 2025)
 
 Esta es una nueva versión mayor con mejoras de GPS, mejoras de APRS y características de calibración.

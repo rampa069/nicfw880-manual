@@ -21,6 +21,38 @@ Each release entry includes:
 
 <!-- New releases will be added below this line, newest first -->
 
+## Version 5.09.02 (December 9, 2025)
+
+This release follows v5.09.01 with APRS beacon timing changes, RMS improvements, and audio fixes.
+
+**Note:** A settings reset is recommended. Without a reset, newly introduced settings may not be initialized properly.
+
+### What's New in v5.09.02
+
+**Beacon Browser Improvements**
+- Added button reminder labels to Beacon browser
+- Beacons can now be read by the RMS and copied to Waypoints
+
+**Audio Fix**
+- Reduced background audio artifact when squelch is on
+
+**APRS Beacon Timing Changes**
+- Added 'Menu → APRS → Beacon RX OV' (Beacon RX Override)
+  - Allows scheduled beacons to interrupt RX
+- **IMPORTANT:** 'Menu → APRS → Beacon Time' is now in **seconds** rather than minutes
+  - ⚠️ WARNING: The existing setting is NOT converted to seconds
+  - If your old setting was 2 minutes, it will now be 2 seconds
+  - You must manually correct this setting after updating
+- APRS Beacon minimum time interval lowered to 10 seconds
+
+**RMS Improvements**
+- Corrected some CHIRP export actions for non-standard squelch tone modes
+- Added a sub-page to the Scanning tab allowing reading of smart scan data
+  - Smart scan data can be used to create channels
+  - Note: Smart Scan data is volatile and does NOT survive a power cycle
+
+---
+
 ## Version 5.09.01 (December 9, 2025)
 
 This is a new major version release with GPS improvements, APRS enhancements, and calibration features.
